@@ -63,6 +63,36 @@ public class TalentsEntity extends BaseEntity {
         return null;
     }
 
+    public boolean create(Talent talent) {
+        return executeUpdate(String.format(
+                "INSERT INTO %s(talent_id,talent_dni,talent_cellphone,talent_name,talent_address,talent_mail,talent_description) VALUES(%d, '%s')",
+                getTableName(),talent.getId(),talent.getDni(),talent.getCellphone(),talent.getName(),talent.getAddress(),talent.getMail(),talent.getDescription(),talent.getName()));
+    }
+
+    public boolean create(int id,int dni,int cellphone,String name,String address, String mail, String description) {
+        return create(new Talent(id,dni,cellphone,name,address,mail,description));
+    }
+
+    public boolean update(int id, String name) {
+        return executeUpdate(String.format(
+                "UPDATE %s SET region_name = '%s' WHERE region_id = %d", getTableName(), name, id));
+    }
+
+    public boolean update(Talent talent) {
+        return update(talent.getId(), talent.getName());
+    }
+
+    public boolean erase(int id) {
+        return executeUpdate(String.format("DELETE FROM %s WHERE region_id = %d",
+                getTableName(), id));
+    }
+
+    public boolean erase(Talent talent) {
+        return executeUpdate(String.format("DELETE FROM %s WHERE region_id = %d",
+                getTableName(), talent.getId()));
+    }
+
+
     public boolean executeUpdate(String sql) {
         try {
             int result = getConnection()
