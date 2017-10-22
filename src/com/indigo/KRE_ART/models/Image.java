@@ -1,5 +1,7 @@
 package com.indigo.KRE_ART.models;
 
+import sun.tools.jconsole.inspector.IconManager;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -14,6 +16,9 @@ public class Image {
         this.talent = talent;
         this.url = url;
         this.coments = coments;
+    }
+
+    public Image() {
     }
 
     public int getId() {
@@ -61,18 +66,18 @@ public class Image {
         return this;
     }
 
-    public static Image from(ResultSet rs) {
+    public static Image from(ResultSet rs, TalentsEntity talentsEntity) {
+        Image image = new Image();
         try {
-            return new Image(
-                    rs.getInt("image_id"),
-                    rs.getInt("image_qual"),
-                    rs.getTalent(TalentsEntity.findById(rs.getInt("talent_id"))),
-                    rs.getString("image_url"),
-                    rs.getString("image_coments"));
-        }catch (SQLException e) {
+            return Image.setId(rs.getInt("image_id"))
+                    .setQual(rs.getInt("image_name"))
+                    .setTalent(talentsEntity.findById(rs.getInt("talent_id")))
+                    .setUrl(rs.getString("image_url"))
+                    .setComents(rs.getString("image_coment"));
+
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return null;
-
     }
 }
