@@ -1,4 +1,4 @@
-package pe.edu.utp.KRE_ART.models;
+package com.indigo.KRE_ART.models;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
