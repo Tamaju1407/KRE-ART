@@ -67,17 +67,17 @@ public class Image {
     }
 
     public static Image from(ResultSet rs, TalentsEntity talentsEntity) {
-        Image image = new Image();
         try {
-            return Image.setId(rs.getInt("image_id"))
-                    .setQual(rs.getInt("image_name"))
-                    .setTalent(talentsEntity.findById(rs.getInt("talent_id")))
-                    .setUrl(rs.getString("image_url"))
-                    .setComents(rs.getString("image_coment"));
-
-        } catch (SQLException e) {
+            return new Image(
+                    rs.getInt("image_id"),
+                    rs.getInt("image_qual"),
+                    talentsEntity.findById(rs.getInt("talent_id")),
+                    rs.getString("image_url"),
+                    rs.getString("image_coments"));
+        }catch (SQLException e) {
             e.printStackTrace();
         }
         return null;
+
     }
 }
