@@ -8,9 +8,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>$Title$</title>
+    <title>Kre-art</title>
   </head>
   <body>
-  $END$
+  <h1>sechira
+
+    
+  </h1>
   </body>
 </html>
