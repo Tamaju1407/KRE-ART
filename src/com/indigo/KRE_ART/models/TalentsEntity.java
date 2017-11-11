@@ -11,41 +11,7 @@ public class TalentsEntity extends BaseEntity {
         setTableName("talents");
     }
 
-    public List<Talent> findAll(){
-        return findByCriteria("");
-    }
-
-    public Talent findById(int id){
-        return findByCriteria(
-                String.format("WHERE talent_id = %d", id)).get(0);
-    }
-
-    public Talent findByDni(int dni){
-        return findByCriteria(
-                String.format("WHERE talent_dni = %d", dni)).get(0);
-    }
-
-    public Talent findByCellphone(int cellphone){
-        return findByCriteria(
-                String.format("WHERE talent_cellphone = %d", cellphone)).get(0);
-    }
-
-    public Talent findByName(String name) {
-        return findByCriteria(
-                String.format("WHERE talent_name = '%s'", name)).get(0);
-    }
-
-    public Talent findByAddress(String address){
-        return findByCriteria(
-                String.format("WHERE talent_address = '%s'", address)).get(0);
-    }
-
-    public Talent findByMail(String mail){
-        return findByCriteria(
-                String.format("WHERE talent_mail = '%s'", mail)).get(0);
-    }
-
-    public List<Talent> findByCriteria(String criteria){
+    public List<Talent> findByCriteria(String criteria, PersonsEntity personsEntity){
         try {
             ResultSet rs = getConnection()
                     .createStatement()
@@ -54,7 +20,7 @@ public class TalentsEntity extends BaseEntity {
                                     .concat(criteria));
             List<Talent> talents = new ArrayList<>();
             while(rs.next())
-                talents.add(Talent.from(rs));
+                talents.add(Talent.from(rs, personsEntity));
 
             return talents;
         } catch (SQLException e) {
@@ -63,24 +29,38 @@ public class TalentsEntity extends BaseEntity {
         return null;
     }
 
+    public List<Talent> findAll(PersonsEntity personsEntity){
+        return findByCriteria("", personsEntity);
+    }
+
+    public Talent findById(int id, PersonsEntity personsEntity){
+        return findByCriteria(
+                String.format("WHERE image_id = %d", id), personsEntity).get(0);
+    }
+
+    public Talent findByPerson(Person person, PersonsEntity personsEntity){
+        return findByCriteria(
+                String.format("WHERE person_id = %d", person.getId()), personsEntity).get(0);
+    }
+
     public boolean create(Talent talent) {
         return executeUpdate(String.format(
-                "INSERT INTO %s(talent_id,talent_dni,talent_cellphone,talent_name,talent_address,talent_mail,talent_description) VALUES(%d, %d, %d, '%s', '%s', '%s', '%s')",
-                getTableName(),talent.getId(),talent.getDni(),talent.getCellphone(),talent.getName(),talent.getAddress(),talent.getMail(),talent.getDescription()));
+                "INSERT INTO %s(talent_id,person_id,talent_category) VALUES(%d, %d, '%s')",
+                getTableName(),talent.getId(),talent.getPerson().getId(),talent.getCategory()));
     }
 
-    public boolean create(int id,int dni,int cellphone,String name,String address, String mail, String description) {
-        return create(new Talent(id,dni,cellphone,name,address,mail,description));
+    public boolean create(int id, Person person, String category) {
+        return create(new Talent(id,person,category));
     }
 
-    public boolean update(int id, int dni, int cellphone, String name, String address, String mail, String description) {
+    public boolean update(int id, Person person, String category) {
         return executeUpdate(String.format(
-                "UPDATE %s SET talent_dni = %d, talent_cellphone = %d, talent_name = '%s', talent_address = '%s', talent_mail = '%s', talent_description = '%s' WHERE talent_id = %d",
-                getTableName(), dni, cellphone, name, address, mail, description, id));
+                "UPDATE %s SET person_id = %d, talent_category = '%s' WHERE talent_id = %d",
+                getTableName(), person.getId(), category, id));
     }
 
     public boolean update(Talent talent) {
-        return update(talent.getId(), talent.getDni(), talent.getCellphone(), talent.getName(), talent.getAddress(), talent. getMail(), talent.getDescription());
+        return update(talent.getId(),talent.getPerson(),talent.getCategory());
     }
 
     public boolean erase(int id) {
@@ -105,5 +85,4 @@ public class TalentsEntity extends BaseEntity {
         }
         return false;
     }
-
 }

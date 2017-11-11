@@ -4,17 +4,19 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Headhunter {
-    private int id,dni,cellphone;
-    private String name,address,mail,description;
+    private int id;
+    private Person person;
+    private String category;
+    private String organization;
 
-    public Headhunter(int id, int dni, int cellphone, String name, String address, String mail, String description) {
+    public Headhunter() {
+    }
+
+    public Headhunter(int id, Person person, String category, String organization) {
         this.id = id;
-        this.dni = dni;
-        this.cellphone = cellphone;
-        this.name = name;
-        this.address = address;
-        this.mail = mail;
-        this.description = description;
+        this.person = person;
+        this.category = category;
+        this.organization = organization;
     }
 
     public int getId() {
@@ -26,70 +28,40 @@ public class Headhunter {
         return this;
     }
 
-    public int getDni() {
-        return dni;
+    public Person getPerson() {
+        return person;
     }
 
-    public Headhunter setDni(int dni) {
-        this.dni = dni;
+    public Headhunter setPerson(Person person) {
+        this.person = person;
         return this;
     }
 
-    public int getCellphone() {
-        return cellphone;
+    public String getCategory() {
+        return category;
     }
 
-    public Headhunter setCellphone(int cellphone) {
-        this.cellphone = cellphone;
+    public Headhunter setCategory(String category) {
+        this.category = category;
         return this;
     }
 
-    public String getName() {
-        return name;
+    public String getOrganization() {
+        return organization;
     }
 
-    public Headhunter setName(String name) {
-        this.name = name;
+    public Headhunter setOrganization(String organization) {
+        this.organization = organization;
         return this;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public Headhunter setAddress(String address) {
-        this.address = address;
-        return this;
-    }
-
-    public String getMail() {
-        return mail;
-    }
-
-    public Headhunter setMail(String mail) {
-        this.mail = mail;
-        return this;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public Headhunter setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-
-    public static Headhunter from(ResultSet rs) {
+    public static Headhunter from(ResultSet rs, PersonsEntity personsEntity) {
         try {
             return new Headhunter(
-                    rs.getInt("hhunter_id"),
-                    rs.getInt("hhunter_dni"),
-                    rs.getInt("hhunter_cellphone"),
-                    rs.getString("hhunter_name"),
-                    rs.getString("hhunter_address"),
-                    rs.getString("hhunter_mail"),
-                    rs.getString("hhunter_description"));
+                    rs.getInt("headhunter_id"),
+                    personsEntity.findById(rs.getInt("person_id")),
+                    rs.getString("headdunter_category"),
+                    rs.getString("headhunter_organization"));
         } catch (SQLException e) {
             e.printStackTrace();
         }
