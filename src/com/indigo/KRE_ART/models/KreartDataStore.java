@@ -77,7 +77,7 @@ public class KreartDataStore {
 
     public List<Subscription> findAllSubscriptions() { return connection == null ? null: getSubscriptionsEntity().findAll(getPersonsEntity());}
 
-    
+
 
     private PersonsEntity getPersonsEntity(){
         if(personsEntity == null){
