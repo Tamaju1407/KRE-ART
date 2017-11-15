@@ -3,7 +3,7 @@ package com.indigo.KRE_ART.models;
 import java.sql.Connection;
 
 public class BaseEntity {
-    Connection connection;
+    static Connection connection;
     String tableName;
 
     public BaseEntity(){
