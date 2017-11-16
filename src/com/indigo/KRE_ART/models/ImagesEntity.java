@@ -43,6 +43,20 @@ public class ImagesEntity extends BaseEntity {
                 String.format("WHERE person_id = %d", person.getId()), personsEntity);
     }
 
+    public int getMaxId() {
+        String sql = "SELECT MAX(image_id) AS max_id FROM images";
+        try {
+            ResultSet resultSet = getConnection()
+                    .createStatement()
+                    .executeQuery(sql);
+            return resultSet.next() ?
+                    resultSet.getInt("max_id") : 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
     public boolean create(Image image) {
         return executeUpdate(String.format(
                 "INSERT INTO %s(image_id,person_id,image_url,image_rate) VALUES(%d, %d, '%s',%d)",

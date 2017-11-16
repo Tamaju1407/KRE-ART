@@ -46,6 +46,20 @@ public class ComentsEntity extends BaseEntity {
         return findByCriteria(String.format("WHERE image_id = %d", image.getId()), personsEntity, imagesEntity);
     }
 
+    public int getMaxId() {
+        String sql = "SELECT MAX(coment_id) AS max_id FROM coments";
+        try {
+            ResultSet resultSet = getConnection()
+                    .createStatement()
+                    .executeQuery(sql);
+            return resultSet.next() ?
+                    resultSet.getInt("max_id") : 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
     public boolean create(Coment coment) {
         return executeUpdate(String.format(
                 "INSERT INTO %s(coment_id,personsend_id,image_id,coment_message,coment_rate) VALUES(%d, %d, %d, %d, '%s', %d)",
