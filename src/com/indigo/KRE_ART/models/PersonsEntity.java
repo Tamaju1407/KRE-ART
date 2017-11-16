@@ -49,7 +49,7 @@ public class PersonsEntity extends BaseEntity {
     }
 
     public int getMaxId() {
-        String sql = "SELECT MAX(person_id) AS max_id FROM regions";
+        String sql = "SELECT MAX(person_id) AS max_id FROM persons";
         try {
             ResultSet resultSet = getConnection()
                     .createStatement()

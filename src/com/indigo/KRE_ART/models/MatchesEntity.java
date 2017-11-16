@@ -46,6 +46,20 @@ public class MatchesEntity extends BaseEntity{
         return findByCriteria(String.format("WHERE personrecive_id = %d", person.getId()), personsEntity);
     }
 
+    public int getMaxId() {
+        String sql = "SELECT MAX(match_id) AS max_id FROM matches";
+        try {
+            ResultSet resultSet = getConnection()
+                    .createStatement()
+                    .executeQuery(sql);
+            return resultSet.next() ?
+                    resultSet.getInt("max_id") : 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
     public boolean create(Match match) {
         return executeUpdate(String.format(
                 "INSERT INTO %s(match_id,personsend_id,personrecive_id,match_message,match_rate) VALUES(%d, %d, %d, %d, '%s',%d)",

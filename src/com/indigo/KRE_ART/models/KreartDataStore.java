@@ -80,6 +80,14 @@ public class KreartDataStore {
 
     public int getMaxIdPerson() { return connection == null ? null: getPersonsEntity().getMaxId();}
 
+    public int getMaxIdComent() { return connection == null ? null: getComentsEntity().getMaxId();}
+
+    public int getMaxIdMatch() { return connection == null ? null: getMatchesEntity().getMaxId();}
+
+    public int getMaxIdImage() { return connection == null ? null: getImagesEntity().getMaxId();}
+
+    public int getMaxIdSubscripton() { return connection == null ? null: getSubscriptionsEntity().getMaxId();}
+
     public Boolean createPerson(int id, String name, int dni, int cellphone, String location, String email, String profile, String description, int rate, int type){
         return connection == null ? false : getPersonsEntity().create(id,name,dni,cellphone,location,email,profile,description,rate,type);
     }

@@ -69,6 +69,14 @@ public class KreartService {
 
     public int getMaxIdPerson() { return  dataStore.getMaxIdPerson();}
 
+    public int getMaxIdComent() { return  dataStore.getMaxIdComent();}
+
+    public int getMaxIdMatch() { return  dataStore.getMaxIdMatch();}
+
+    public int getMaxIdImage() { return  dataStore.getMaxIdImage();}
+
+    public int getMaxIdSubscription() { return  dataStore.getMaxIdSubscripton();}
+
     public Boolean createPerson(int id, String name, int dni, int cellphone, String location, String email, String profile, String description, int rate, int type){
         return dataStore.createPerson(id,name,dni,cellphone,location,email,profile,description,rate,type);
     }

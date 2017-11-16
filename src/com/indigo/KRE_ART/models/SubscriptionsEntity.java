@@ -43,6 +43,20 @@ public class SubscriptionsEntity extends BaseEntity {
         return findByCriteria(String.format("WHERE person_id = %d", id), personsEntity).get(0);
     }
 
+    public int getMaxId() {
+        String sql = "SELECT MAX(subscription_id) AS max_id FROM subscriptions";
+        try {
+            ResultSet resultSet = getConnection()
+                    .createStatement()
+                    .executeQuery(sql);
+            return resultSet.next() ?
+                    resultSet.getInt("max_id") : 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
     public boolean create(Subscription subscription) {
         return executeUpdate(String.format(
                 "INSERT INTO %s(subscription_id,person_id,subscription_type,subscription_payment,subscription_datestarted,subscription_dateexpiration) VALUES(%d, %d, %d, %d, %d, %d)",
