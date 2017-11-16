@@ -122,16 +122,18 @@ ul,ol{
 }
 
 .btn_submit, .btn_reset{
-	width: 40%;
 	background-color: #6E6E6E;
+	width: 35%;
 	color: white;
 	border-radius: 7px;
 	border: none;
+	padding: .5rem;
 }
 
 .btn_submit:hover{
 	background-color: #424242;
 }
+
 .btn_reset:hover{
 	background-color: #424242;
 }
@@ -140,62 +142,51 @@ ul,ol{
 	text-align: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /* LOGIN*/
 .login_container{
-	background-color: #E6E6E6;
-	max-width: 550px;
-	height: 350px;
-	margin: 3% auto;
-	padding-bottom: 1rem;
+	background-color:#E6E6E6;
+	max-width: 500px;
+	height: auto;
+	margin: 5% auto;
+	padding-bottom: 3rem 0; /**/
 }
 .login_top{
-	width: 100%;
 	text-align: center;
-	padding: 5px;
-	font-weight: bold;
-	font-size: 18px;
+	padding: 3px;
+	margin-bottom: 1rem;
 }
 .login_top h2{
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 22px;
 
 }
 .login_form{
 	display: flex;
 	flex-direction: column;
 	margin-top: 1rem;
-	padding: 0 30px;
+	padding: 0 80px;
 }
+
 input[type=text], [type=password]{
 	background-color: #FAFAFA;
 	border-radius: 7px;
+	border: none;
 	font-weight: bold;
 	padding: .5rem;
 	margin: .5rem 0;
 }
-input[type=text], [type=password]:focus {
-	border-color: #000000;
-	background-color: #ffffff
-}
-.btn_submit{
-	height: 2.5rem;
-	border: none;
-	background-color: #6E6E6E;
+
+.form_recover{
+	color:#ffffff;
+	text-decoration: none;
+	text-align: center;
+	font-size: 15px;
 }
 
-/*MENU*/
 
+
+
+/* slider*/
 .navegacion{
 	width: 100%;
 	background: #000000;
