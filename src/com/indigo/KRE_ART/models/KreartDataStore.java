@@ -78,6 +78,8 @@ public class KreartDataStore {
 
     public List<Subscription> findAllSubscriptions() { return connection == null ? null: getSubscriptionsEntity().findAll(getPersonsEntity());}
 
+    public int getMaxIdPerson() { return connection == null ? null: getPersonsEntity().getMaxId();}
+
     public Boolean createPerson(int id, String name, int dni, int cellphone, String location, String email, String profile, String description, int rate, int type){
         return connection == null ? false : getPersonsEntity().create(id,name,dni,cellphone,location,email,profile,description,rate,type);
     }

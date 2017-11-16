@@ -48,6 +48,20 @@ public class PersonsEntity extends BaseEntity {
         return findByCriteria("");
     }
 
+    public int getMaxId() {
+        String sql = "SELECT MAX(person_id) AS max_id FROM regions";
+        try {
+            ResultSet resultSet = getConnection()
+                    .createStatement()
+                    .executeQuery(sql);
+            return resultSet.next() ?
+                    resultSet.getInt("max_id") : 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
     public boolean create(Person person) {
         return executeUpdate(String.format(
                 "INSERT INTO %s(person_id,person_name,person_dni,person_cellphone,person_location,person_email,person_profile,person_description,person_rate,person_type) VALUES(%d, '%s', %d, %d, '%s', '%s', '%s', '%s', %d, %d)",
