@@ -1,84 +1,22 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
-@import url(menu.css);
-@import url(banner.css);
-@import url(blog.css);
-@import url(info.css);
-
+html{
+	font-size: 16px;
+	font-family: 'calibri'
+}
 body{
 	padding: 0;
 	margin: 0;
-	font-family: calibri;
 	background-color: #FAFAFA;
 }
 header{
 	width: 100%;
 	height: 250px;
 	position: relative;
-	
 }
-nav li{
-	background-color: #000000;
-	margin: 0;
-	padding: 0;
-	display: inline-block;
-	
-}
-nav a{
-	background: #000000;
-	border-radius: 0.30em;
-	color: #FACC2E; /*color naranja al Amarillo*/
-	
-	font-family: calibri;
-	font-size: 1.9em;
-	padding: 0.2em; /*relleno a los 4 lados*/
-	 /* animacion necesita 3 atributos color, 
-	 forma, movimiento*/
-	-ms-transition: all 0.5s ease-in;
-	-moz-transition: all 0.5s ease-in;
-	-o-transition: all 0.5s ease-in;
-	-webkit-transition: all 0.5s ease-in;
-	transition: all 0.5s ease-in;
-}
-/* al pasar por el menu*/
-nav a:hover{
-	background: #FACC2E; /* negro */
-	color: #FFFFFF;
-	
-}
-.testbox{
-	background-color:#FACC2E;
-	border:2px solid #FAFAFA;
-	color: #FFFFFF;
-	padding:2px;
-	text-align:center;
-	margin:30px auto;
-	width:500px;
-	font-family: calibri;
-	font:30px  calibri;;
-}
-
-section h3{
-	float: center-right;
-}
-.container{
-	
-	
-}
-.contenedor {
-	width: 98%;
-	margin: auto;
-	text-align: center;
-}
-header .contenedor {
-	display: table;
-}
-
 
 header img{
 	width: 250px;
 	display:block;
 	margin:auto;
-	
 }
 
 #wrap{
@@ -90,12 +28,6 @@ ul,ol{
 	list-style: none;
 	text-align: center;
 }
-/*estilo de mi perfil*/
-
-
-	
-}
-
 .slideshow{
 	width: 90%;
 	position: relative;
@@ -141,53 +73,58 @@ ul,ol{
 	border-radius: 3px;
 }
 
+/*REGISTRO*/
 .container{
-	max-width: 650px;
-	height: 450px;
-	background-color: #E6E6E6;
-	margin: 3% auto;
-	padding-bottom: 1rem; 
+	max-width: 800px;
+	height: auto;
+	background-color:#E6E6E6;
+	margin: 5% auto;
+	padding-bottom: 1rem; /**/
 }
+
 .form_top{
 	width: 100%;
 	text-align: center;
 	padding: 3px;
+	margin-bottom: 1rem;  /**/
 }
 
-
-/* texto de registro*/
 .form_top h2{
 	font-weight: bold;
-	font-size: 24px;
+	font-size: 22px;
 }
+
 .form_reg{
 	padding: 0 10rem;
 	display: flex;
 	flex-direction: column;
 }
+
+.opciones{
+	margin: 1rem;
+	display: flex;
+	padding: 1rem auto;
+
+}
+
 .btn_form{
 	display: flex;
 	justify-content: space-around;
 	margin-top: 1rem;
-	padding: 0 20px;
 }
-.input{
-	width: 100%;
-}
+
 .input{
 	background-color: #FAFAFA;
-	padding: .5rem;
-	margin: .7rem 0;
 	border-radius: 7px;
 	border: none;
+	padding: .5rem;
+	margin: .7rem 0;
 }
 
 .btn_submit, .btn_reset{
 	width: 40%;
 	background-color: #6E6E6E;
 	color: white;
-	padding: .5rem;
-	margin: .5rem .4rem;
 	border-radius: 7px;
 	border: none;
 }
@@ -199,13 +136,28 @@ ul,ol{
 	background-color: #424242;
 }
 
+.form_link{
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* LOGIN*/
 .login_container{
 	background-color: #E6E6E6;
 	max-width: 550px;
 	height: 350px;
 	margin: 3% auto;
-	padding-bottom: 1rem; 
+	padding-bottom: 1rem;
 }
 .login_top{
 	width: 100%;
@@ -227,10 +179,10 @@ ul,ol{
 }
 input[type=text], [type=password]{
 	background-color: #FAFAFA;
-    border-radius: 7px;
-    font-weight: bold;
-    padding: .5rem;
-    margin: .5rem 0;
+	border-radius: 7px;
+	font-weight: bold;
+	padding: .5rem;
+	margin: .5rem 0;
 }
 input[type=text], [type=password]:focus {
 	border-color: #000000;
@@ -244,6 +196,32 @@ input[type=text], [type=password]:focus {
 
 /*MENU*/
 
+.navegacion{
+	width: 100%;
+	background: #000000;
+}
+.navegacion nav{
+	width: 90%;
+}
+.boton-menu{
+	display: none;
+}
+.menu{
+	list-style: none;
+	width: 100%;
+}
+.menu li{
+	display: inline-block;
+}
+.menu li a{
+	display: block;
+	padding: 15px;
+	color: #ffffff;
+	text-decoration: none;
+}
+.menu li a:hover{
+	background: #FACC2E;
+}
 
 
 
@@ -253,8 +231,8 @@ input[type=text], [type=password]:focus {
 
 /* pie de página*/
 footer {
-    width:100%;
-    height:120px;
+	width:100%;
+	height:120px;
 	background-color: #151515;
 	color: white;
 	text-align: center;
