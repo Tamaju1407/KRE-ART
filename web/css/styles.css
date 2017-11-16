@@ -182,11 +182,24 @@ input[type=text], [type=password]{
 	text-align: center;
 	font-size: 15px;
 }
+.btn{
+	background-color: #6E6E6E;
+	text-align: center;
+	width: 35%;
+	color: white;
+	border-radius: 7px;
+	border: none;
+	padding: .5rem;
+	margin-left:100px;
+
+}
+
+.btn:hover{
+	background-color: #424242;
+}
 
 
-
-
-/* slider*/
+/* inicio de perfil*/
 .navegacion{
 	width: 100%;
 	background: #000000;
