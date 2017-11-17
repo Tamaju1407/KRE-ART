@@ -16,24 +16,63 @@
     <link rel="stylesheet" href="css/font-awesome.css">
 
     <header>
-        <a href=""><img src="img/logo.png"></a>
+        <a href="index.html"><img src="img/logo.png"></a>
     </header>
+
 
 </head>
 
 <body>
-
-
-<div class="menu_bar">
+<div class="navegacion">
+    <div class="boton-menu">
+        <a href="#"><span class="fa fa-bars"></span></a>
+    </div>
     <nav>
-        <ul>
-            <li><a href="#">Inicio</a></li>
+        <ul class="menu">
+            <li><a href="inicio.html">Inicio</a></li>
             <li><a href="#">Mi perfil</a></li>
             <li><a href="#">Búsqueda</a></li>
         </ul>
     </nav>
-
 </div>
+<h3>DESTACADOS</h3>
+<div class="gallery">
+    <a target="_blank" href="1.jpg">
+        <img src="img/1.jpg" alt="Forest" width="300" height="200">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+</div>
+<div class="gallery">
+    <a target="_blank" href="3.jpg">
+        <img src="img/3.jpg" alt="Forest" width="300" height="200">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+</div>
+<div class="gallery">
+    <a target="_blank" href="4.jpg">
+        <img src="img/4.jpg" alt="Forest" width="300" height="200">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+</div>
+<div class="gallery">
+    <a target="_blank" href="2.jpg">
+        <img src="img/2.jpg" alt="Forest" width="300" height="200">
+    </a>
+    <div class="desc">Te amo Perú. Artista: Arturo Chavez</div>
+</div>
+<div class="gallery">
+    <a target="_blank" href="5.jpg">
+        <img src="img/5.jpg" alt="Forest">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+</div>
+<div class="gallery">
+    <a target="_blank" href="img_forest.jpg">
+        <img src="img/6.jpg" alt="Forest" width="300" height="200">
+    </a>
+    <div class="desc">Cauce Negro. Artista: Joel Ramos</div>
+</div>
+
 
 
 </body>
@@ -55,4 +94,6 @@
     </ul>
     <p class="derechos">© 2017 Indigo Recycle. All Rights Reserved</p>
 </footer>
+
+
 </html>
