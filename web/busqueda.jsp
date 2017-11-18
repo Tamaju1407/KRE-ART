@@ -15,10 +15,10 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/font-awesome.css">
     <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/jquery.dataTables.min"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
 
     <header>
-        <a href="index.jsp"><img src="img/logo.png"></a>
+        <a href="index.html"><img src="img/logo.png"></a>
     </header>
 
 
@@ -31,18 +31,87 @@
     </div>
     <nav>
         <ul class="menu">
-            <li><a href="inicio.jsp">Inicio</a></li>
-            <li><a href="perfil.jsp">Mi perfil</a></li>
-            <li><a href="busqueda.jsp">Búsqueda</a></li>
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="perfil.html">Mi perfil</a></li>
+            <li><a href="busqueda.html">Búsqueda</a></li>
         </ul>
     </nav>
 </div>
 
-<div class="busqueda">
-    <input type="search" placeholder="buscar...">
+<div class="header-top">
 
+    <input type="search"  id="input-search" placeholder="buscar...">
+
+    <div class="conten-search">
+        <div class="content-table">
+            <table>
+                <thead>
+                <tr>
+                    <td></td>
+                </tr>
+                <tbody>
+                <tr>
+                    <td><a href="#">inicio</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">artista</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">cazatalento</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">contacto</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">destacados</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">kre-art</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">ilustrador</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">pintores</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">fotografos</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">escultores</a></td>
+                </tr>
+                </tbody>
+                </thead>
+            </table>
+
+
+        </div>
+
+    </div>
 </div>
 
+
+
+
+<div class="info">
+    <p>
+        CATEGORÍAS:</p>
+
+    <p>Encontrarás la catégorías que más se adecue al</p>
+
+    <nav class="navegadores">
+        <a href="#">ILUSTRADORES</a>
+        <a href="#">FOTOGRAFOS</a>
+        <a href="#">PINTORES</a>
+        <a href="#">ESCULTORES</a>
+    </nav>
+
+
+
+
+
+
+</div>
 
 
 
