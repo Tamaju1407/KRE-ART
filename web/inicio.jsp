@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/font-awesome.css">
 
     <header>
-        <a href="index.html"><img src="img/logo.png"></a>
+        <a href="index.jsp"><img src="img/logo.png"></a>
     </header>
 
 
@@ -29,9 +29,9 @@
     </div>
     <nav>
         <ul class="menu">
-            <li><a href="inicio.html">Inicio</a></li>
-            <li><a href="#">Mi perfil</a></li>
-            <li><a href="#">Búsqueda</a></li>
+            <li><a href="inicio.jsp">Inicio</a></li>
+            <li><a href="perfil.jsp">Mi perfil</a></li>
+            <li><a href="busqueda.jsp">Búsqueda</a></li>
         </ul>
     </nav>
 </div>
