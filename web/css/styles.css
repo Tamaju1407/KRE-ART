@@ -264,6 +264,22 @@ div.desc {
 
 
 
+/*busqueda*/
+.busqueda{
+	width: 100%;
+	max-width: 1000px;
+	margin: 100px;
+	padding-top: auto;
+}
+
+input[type="search"]{
+	padding: 15px;
+	border-radius: 10px;
+	padding-right: 500px;
+
+	margin-left:250px;
+
+}
 
 
 
