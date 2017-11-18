@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/font-awesome.css">
 
     <header>
-        <a href="index.html"><img src="img/logo.png"></a>
+        <a href="index.jsp"><img src="img/logo.png"></a>
     </header>
 
 
