@@ -34,7 +34,7 @@ public class PersonsController extends javax.servlet.http.HttpServlet {
             if (action.equals("index")){
                 List<Person> persons = service.findAllPersons();
                 request.setAttribute("persons", persons);
-                url = "listPersons.jsp";
+                url = "list.jsp";
             }
             if (action.equals("show")){
                 int id = Integer.parseInt(request.getParameter("id"));
@@ -65,9 +65,26 @@ public class PersonsController extends javax.servlet.http.HttpServlet {
                 String description = request.getParameter("description");
                 int rate = 0;
                 int type = 0;
-                if(request.getParameter("type") == "talent"){ type = 1;}
-                else { type = 2;}
+                int id2 = 0;
+                Person person = service.findPersonById(id);
+                String category = "";
+                String organization = "";
+                if(request.getParameter("type") == "talent"){
+                    type = 1;
+                    id2 = Integer.parseInt("1" + String.valueOf(id));
+                    category = request.getParameter("category");
+                }
+                else {
+                    type = 2;
+                    id2 = Integer.parseInt("2" + String.valueOf(id));
+                    category = request.getParameter("category");
+                    organization = request.getParameter("organization");
+                }
                 boolean execute = service.createPerson(id,name,dni,cellphone,location,email,profile,description,rate,type);
+                if (execute == true){
+                    if(type == 1){ execute = service.createTalent(id2,person,category);}
+                    else {execute = service.createHeadHunter(id2,person,category,organization);}
+                }
                 List<Person> persons = service.findAllPersons();
                 request.setAttribute("persons", persons);
                 url = "list.jsp";
@@ -83,9 +100,26 @@ public class PersonsController extends javax.servlet.http.HttpServlet {
                 String description = request.getParameter("description");
                 int rate = 0;
                 int type = 0;
-                if(request.getParameter("type") == "talent"){ type = 1;}
-                else { type = 2;}
+                int id2 = 0;
+                Person person = service.findPersonById(id);
+                String category = "";
+                String organization = "";
+                if(request.getParameter("type") == "talent"){
+                    type = 1;
+                    id2 = Integer.parseInt("1" + String.valueOf(id));
+                    category = request.getParameter("category");
+                }
+                else {
+                    type = 2;
+                    id2 = Integer.parseInt("2" + String.valueOf(id));
+                    category = request.getParameter("category");
+                    organization = request.getParameter("organization");
+                }
                 boolean execute = service.updatePerson(id,name,dni,cellphone,location,email,profile,description,rate,type);
+                if (execute == true){
+                    if (type == 1){ execute = service.updateTalent(id2,person,category);}
+                    else{ execute = service.updateHeadHunter(id2,person,category,organization);}
+                }
                 List<Person> persons = service.findAllPersons();
                 request.setAttribute("persons", persons);
                 url = "list.jsp";
