@@ -24,9 +24,9 @@
 			
 			<form class="login_form">
 				<span class="fa fa-user"></span><input class="input"  type="text";
-				Usuario" required autofocus>
+				Usuario required autofocus>
 				<span class="fa fa-key"></span><input class="input"  type="password";
-				password" required>
+				password required>
 				<input  class="btn_submit" type="submit" value="ENTRAR">
 				<a class="form_recover" href="">Olvidaste la contraseña?</a>
 			</form>
