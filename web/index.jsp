@@ -19,7 +19,7 @@
   <script src="js/main.js"></script>
 
   <header>
-    <a href="index.html"><img src="img/logo.png"></a>
+    <a href="index.jsp"><img src="img/logo.png"></a>
   </header>
 </head>
 
@@ -52,8 +52,8 @@
   </ol>
 </div>
 <nav class="navegadores">
-  <a href="registro.html">REGISTER</a>
-  <a href="login.html">LOGIN</a>
+  <a href="registro.jsp">REGISTER</a>
+  <a href="login.jsp">LOGIN</a>
 </nav>
 </body>
 
