@@ -57,6 +57,7 @@ public class PersonsController extends javax.servlet.http.HttpServlet {
             if(action.equals("create")){
                 int id = service.getMaxIdPerson() + 1;
                 String name = request.getParameter("name");
+                String password = request.getParameter("password");
                 int dni = Integer.parseInt(request.getParameter("dni"));
                 int cellphone = Integer.parseInt(request.getParameter("cellphone"));
                 String location = request.getParameter("district") + ", " + request.getParameter("address");
@@ -80,7 +81,7 @@ public class PersonsController extends javax.servlet.http.HttpServlet {
                     category = request.getParameter("category");
                     organization = request.getParameter("organization");
                 }
-                boolean execute = service.createPerson(id,name,dni,cellphone,location,email,profile,description,rate,type);
+                boolean execute = service.createPerson(id,name,password,dni,cellphone,location,email,profile,description,rate,type);
                 if (execute == true){
                     if(type == 1){ execute = service.createTalent(id2,person,category);}
                     else {execute = service.createHeadHunter(id2,person,category,organization);}
@@ -92,6 +93,7 @@ public class PersonsController extends javax.servlet.http.HttpServlet {
             if(action.equals("update")){
                 int id = Integer.parseInt(request.getParameter("int"));
                 String name = request.getParameter("name");
+                String password = request.getParameter("password");
                 int dni = Integer.parseInt(request.getParameter("dni"));
                 int cellphone = Integer.parseInt(request.getParameter("cellphone"));
                 String location = request.getParameter("district") + ", " + request.getParameter("address");
@@ -115,7 +117,7 @@ public class PersonsController extends javax.servlet.http.HttpServlet {
                     category = request.getParameter("category");
                     organization = request.getParameter("organization");
                 }
-                boolean execute = service.updatePerson(id,name,dni,cellphone,location,email,profile,description,rate,type);
+                boolean execute = service.updatePerson(id,name,password,dni,cellphone,location,email,profile,description,rate,type);
                 if (execute == true){
                     if (type == 1){ execute = service.updateTalent(id2,person,category);}
                     else{ execute = service.updateHeadHunter(id2,person,category,organization);}
