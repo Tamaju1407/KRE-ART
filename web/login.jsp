@@ -19,8 +19,8 @@
 	</div>
 
 	<form class="login_form">
-		<span class="fa fa-user-circle"></span>Usuario<input type="text" usuario" required autofocus>
-		<span class="fa fa-lock"></span>Contraseña<input type="password" clave" required>
+		<span class="fa fa-user-circle"></span>Usuario<input type="text" usuario required autofocus>
+		<span class="fa fa-lock"></span>Contraseña<input type="password" clave required>
 
 		<input class="btn" type="#" value="ENTRAR">
 		<p class="form_recover"><a href="#">¿Olvidaste la contraseña?</a></p>

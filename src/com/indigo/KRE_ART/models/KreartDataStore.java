@@ -65,6 +65,10 @@ public class KreartDataStore {
         return getSubscriptionsEntity().findById(id, getPersonsEntity());
     }
 
+    public List<Person> findAllPersonsByCategory(String category) { return connection == null ? null: getPersonsEntity().findByCategory(category); }
+
+    public List<Image> findAllImagesByPerson(Person person) { return connection == null ? null: getImagesEntity().findByPerson(person, getPersonsEntity());}
+
     public List<Person> findAllPersons() { return connection == null ? null: getPersonsEntity().findAll();}
 
     public List<Talent> findAllTalent() { return connection == null ? null: getTalentsEntity().findAll(getPersonsEntity());}
