@@ -6,6 +6,7 @@ import java.sql.SQLException;
 public class Person {
     private int id;
     private String name;
+    private String password;
     private int dni;
     private int cellphone;
     private String location;
@@ -18,9 +19,10 @@ public class Person {
     public Person() {
     }
 
-    public Person(int id, String name, int dni, int cellphone, String location, String email, String profile, String description, int rate, int type) {
+    public Person(int id, String name, String password, int dni, int cellphone, String location, String email, String profile, String description, int rate, int type) {
         this.id = id;
         this.name = name;
+        this.password = password;
         this.dni = dni;
         this.cellphone = cellphone;
         this.location = location;
@@ -121,10 +123,20 @@ public class Person {
         return this;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public Person setPassword(String password) {
+        this.password = password;
+        return this;
+    }
+
     public static Person from(ResultSet rs) {
         try {
             return new Person(rs.getInt("person_id"),
                     rs.getString("person_name"),
+                    rs.getString("person_password"),
                     rs.getInt("person_dni"),
                     rs.getInt("person_cellphone"),
                     rs.getString("person_location"),

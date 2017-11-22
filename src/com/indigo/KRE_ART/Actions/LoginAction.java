@@ -2,10 +2,12 @@ package com.indigo.KRE_ART.Actions;
 
 public class LoginAction {
     public String execute() {
-        boolean user;
-        user = false;
+        boolean verify;
+        verify = false;
+        String user;
+        String password;
 
-        if (user == true)
+        if (verify == true)
             return "OK";
         else
             return "errorUsuario";

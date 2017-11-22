@@ -77,20 +77,20 @@ public class KreartService {
 
     public int getMaxIdSubscription() { return  dataStore.getMaxIdSubscripton();}
 
-    public Boolean createPerson(int id, String name, int dni, int cellphone, String location, String email, String profile, String description, int rate, int type){
-        return dataStore.createPerson(id,name,dni,cellphone,location,email,profile,description,rate,type);
+    public Boolean createPerson(int id, String name, String password, int dni, int cellphone, String location, String email, String profile, String description, int rate, int type){
+        return dataStore.createPerson(id,name,password,dni,cellphone,location,email,profile,description,rate,type);
     }
 
     public Boolean createPerson(Person person){
-        return dataStore.createPerson(person.getId(),person.getName(),person.getDni(),person.getCellphone(),person.getLocation(),person.getEmail(),person.getProfile(),person.getDescription(),person.getRate(),person.getType());
+        return dataStore.createPerson(person.getId(),person.getName(),person.getPassword(),person.getDni(),person.getCellphone(),person.getLocation(),person.getEmail(),person.getProfile(),person.getDescription(),person.getRate(),person.getType());
     }
 
-    public Boolean updatePerson(int id, String name, int dni, int cellphone, String location, String email, String profile, String description, int rate, int type){
-        return dataStore.updatePerson(id,name,dni,cellphone,location,email,profile,description,rate,type);
+    public Boolean updatePerson(int id, String name, String password, int dni, int cellphone, String location, String email, String profile, String description, int rate, int type){
+        return dataStore.updatePerson(id,name,password,dni,cellphone,location,email,profile,description,rate,type);
     }
 
     public Boolean updatePerson(Person person){
-        return dataStore.updatePerson(person.getId(),person.getName(),person.getDni(),person.getCellphone(),person.getLocation(),person.getEmail(),person.getProfile(),person.getDescription(),person.getRate(),person.getType());
+        return dataStore.updatePerson(person.getId(),person.getName(),person.getPassword(),person.getDni(),person.getCellphone(),person.getLocation(),person.getEmail(),person.getProfile(),person.getDescription(),person.getRate(),person.getType());
     }
 
     public Boolean erasePerson(int id){
