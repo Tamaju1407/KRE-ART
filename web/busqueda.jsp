@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/font-awesome.css">
     <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/jquery.dataTables.min.js"></script>
 
     <header>
         <a href="index.jsp"><img src="img/logo.png"></a>
@@ -42,53 +41,9 @@
 
     <input type="search"  id="input-search" placeholder="buscar...">
 
-    <div class="conten-search">
-        <div class="content-table">
-            <table>
-                <thead>
-                <tr>
-                    <td></td>
-                </tr>
-                <tbody>
-                <tr>
-                    <td><a href="#">inicio</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#">artista</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#">cazatalento</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#">contacto</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#">destacados</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#">kre-art</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#">ilustrador</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#">pintores</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#">fotografos</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#">escultores</a></td>
-                </tr>
-                </tbody>
-                </thead>
-            </table>
 
-
-        </div>
-
-    </div>
 </div>
+
 
 
 
@@ -106,15 +61,7 @@
         <a href="#">ESCULTORES</a>
     </nav>
 
-
-
-
-
-
 </div>
-
-
-
 </body>
 
 <footer>
