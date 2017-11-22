@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="css/font-awesome.css">
 
 	<header>
-		<a href="index.html"><img src="img/logo.png"></a>
+		<a href="index.jsp"><img src="img/logo.png"></a>
 	</header>
 </head>
 
@@ -16,20 +16,20 @@
 
 <div class="container">
 	<div class="form_top">
-		<h2>Formulario de Registro</h2>
+		<h2>Registro de usuario</h2>
 	</div>
 	<form class="form_reg" action="">
-		<span class="fa fa-user"></span>Nombres Completos<input class="input" type="text" nombre" required autofocus>
-		<span class="fa fa-id-card"></span>D.N.I<input class="input" type="text" dni" required>
-		<span class="fa fa-phone-square"></span>Teléfono<input class="input" type="text" celular" required>
-		<span class="fa fa-envelope"></span>Email<input class="input"  type="email" correo" required>
-		<span class="fa fa-user-circle"></span>Usuario<input class="input" type="text" usuario" required>
-		<span class="fa fa-home"></span>Dirección<input class="input" type="text" direccion" required>
-		<span class="fa fa-lock"></span>Contraseña<input class="input"  type="password"  clave" required>
+		<span class="fa fa-user"></span>Nombres<input class="input" type="text" placeholder="Ingresa nombre y apellidos completos" required>
+		<span class="fa fa-id-card"></span>D.N.I<input class="input" type="text" placeholder=" Ingresa 8 dígitales numerales" required>
+		<span class="fa fa-phone-square"></span>Teléfono<input class="input" type="text" placeholder=" Ingresa 9 números" required>
+		<span class="fa fa-envelope"></span>Email<input class="input"  type="email"  placeholder="Ingresa correo electrónico" required>
+		<span class="fa fa-home"></span>Dirección<input class="input" type="text" placeholder=" Ejm: Av. Perú 3624, San Martín de porres" required>
+		<span class="fa fa-lock"></span>Contraseña<input class="input"  type="password"  placeholder="crea una contraseña" required>
 
 		<div class="opciones" action="">
 			<input type="radio" name="gender" value="nuevo talento" checked> Nuevo talento<br>
-			<input type="radio" name="gender" value="busca talento">Busca talento<br>
+			<input type="radio" name="gender" value="busca talento">Caza talento<br>
+			<input class="input"  type="text"  placeholder=" " required>
 		</div>
 
 
@@ -39,7 +39,7 @@
 			<input class="btn_submit" type="submit" value="REGISTRAR">
 			<input class="btn_reset" type="reset" value="LIMPIAR">
 		</div>
-		<p class="form_link">¿ya tienes una cuenta?<a href="#">Ingresa aquí</a></p>
+		<p class="form_link">¿ya tienes una cuenta?<a href="login.jsp">Ingresa aquí</a></p>
 	</form>
 </div>
 
