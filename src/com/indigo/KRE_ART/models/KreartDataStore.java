@@ -8,6 +8,7 @@ public class KreartDataStore {
     private Connection connection;
     private PersonsEntity personsEntity;
     private TalentsEntity talentsEntity;
+    private PersonAllEntity personAllEntity;
     private HeadhuntersEntity headhuntersEntity;
     private ComentsEntity comentsEntity;
     private MatchesEntity matchesEntity;
@@ -78,6 +79,8 @@ public class KreartDataStore {
 
     public List<Subscription> findAllSubscriptions() { return connection == null ? null: getSubscriptionsEntity().findAll(getPersonsEntity());}
 
+    public Person findPersonByEmail(String email){ return connection == null ? null: getPersonsEntity().findByEmail(email);}
+
     public int getMaxIdPerson() { return connection == null ? null: getPersonsEntity().getMaxId();}
 
     public int getMaxIdComent() { return connection == null ? null: getComentsEntity().getMaxId();}
@@ -87,6 +90,8 @@ public class KreartDataStore {
     public int getMaxIdImage() { return connection == null ? null: getImagesEntity().getMaxId();}
 
     public int getMaxIdSubscripton() { return connection == null ? null: getSubscriptionsEntity().getMaxId();}
+
+    public PersonAll createPersonAll(Person person){ return connection == null ? null: getPersonAllEntity().create(person);}
 
     public Boolean createPerson(int id, String name, String password, int dni, int cellphone, String location, String email, String profile, String description, int rate, int type){
         return connection == null ? false : getPersonsEntity().create(id,name,password,dni,cellphone,location,email,profile,description,rate,type);
@@ -270,6 +275,13 @@ public class KreartDataStore {
             talentsEntity.setConnection(connection);
         }
         return talentsEntity;
+    }
+
+    private PersonAllEntity getPersonAllEntity(){
+        if(personAllEntity == null){
+            personAllEntity = new PersonAllEntity();
+        }
+        return personAllEntity;
     }
 
     private HeadhuntersEntity getHeadhuntersEntity(){
