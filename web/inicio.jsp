@@ -29,52 +29,37 @@
     </div>
     <nav>
         <ul class="menu">
-            <li><a href="inicio.html">Inicio</a></li>
-            <li><a href="#">Mi perfil</a></li>
-            <li><a href="#">Búsqueda</a></li>
+            <li><a href="inicio.jsp">Inicio</a></li>
+            <li><a href="perfil.jsp">Mi perfil</a></li>
+            <li><a href="busqueda.jsp">Búsqueda</a></li>
         </ul>
     </nav>
 </div>
 <h3>DESTACADOS</h3>
 <div class="gallery">
-    <a target="_blank" href="1.jpg">
-        <img src="img/1.jpg" alt="Forest" width="300" height="200">
-    </a>
-    <div class="desc">Add a description of the image here</div>
+    <img src="img/1.jpg" alt="">
+    <div class="desc">Ilustración de Alfred Basha</div>
 </div>
 <div class="gallery">
-    <a target="_blank" href="3.jpg">
-        <img src="img/3.jpg" alt="Forest" width="300" height="200">
-    </a>
-    <div class="desc">Add a description of the image here</div>
+    <img src="img/3.jpg" alt="">
+    <div class="desc">Fotografía de Manuel Mescco Cano</div>
 </div>
 <div class="gallery">
-    <a target="_blank" href="4.jpg">
-        <img src="img/4.jpg" alt="Forest" width="300" height="200">
-    </a>
-    <div class="desc">Add a description of the image here</div>
+    <img src="img/4.jpg" alt="">
+    <div class="desc">Lobo de Colores</div>
 </div>
 <div class="gallery">
-    <a target="_blank" href="2.jpg">
-        <img src="img/2.jpg" alt="Forest" width="300" height="200">
-    </a>
-    <div class="desc">Te amo Perú. Artista: Arturo Chavez</div>
+    <img src="img/2.jpg" alt="">
+    <div class="desc">Ilustración de Arturo Chavez</div>
 </div>
 <div class="gallery">
-    <a target="_blank" href="5.jpg">
-        <img src="img/5.jpg" alt="Forest">
-    </a>
-    <div class="desc">Add a description of the image here</div>
+    <img src="img/5.jpg" alt="">
+    <div class="desc">Pintura de Luis Angulo</div>
 </div>
 <div class="gallery">
-    <a target="_blank" href="img_forest.jpg">
-        <img src="img/6.jpg" alt="Forest" width="300" height="200">
-    </a>
-    <div class="desc">Cauce Negro. Artista: Joel Ramos</div>
+    <img src="img/6.jpg" alt="">
+    <div class="desc"> Ilustración de Joel Ramos</div>
 </div>
-
-
-
 </body>
 
 <footer>
@@ -94,6 +79,4 @@
     </ul>
     <p class="derechos">© 2017 Indigo Recycle. All Rights Reserved</p>
 </footer>
-
-
 </html>
