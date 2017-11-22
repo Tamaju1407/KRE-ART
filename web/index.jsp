@@ -52,8 +52,8 @@
   </ol>
 </div>
 <nav class="navegadores">
-  <a href="registro.jsp">REGISTER</a>
-  <a href="login.jsp">LOGIN</a>
+  <a href="registro.jsp">REGISTRARSE</a>
+  <a href="login.jsp">ENTRAR</a>
 </nav>
 </body>
 
