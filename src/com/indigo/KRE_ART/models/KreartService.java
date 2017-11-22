@@ -37,6 +37,8 @@ public class KreartService {
 
     public void setDataStore(KreartDataStore dataStore) { this.dataStore = dataStore; }
 
+    public PersonAll createPersonAll(Person person) { return dataStore.createPersonAll(person); }
+
     public List<Person> findAllPersons() { return dataStore.findAllPersons(); }
 
     public List<Talent> findAllTalents() { return dataStore.findAllTalent(); }
@@ -50,6 +52,8 @@ public class KreartService {
     public List<Image> findAllImages() { return dataStore.findAllImages(); }
 
     public List<Subscription> findAllSubscriptions() { return  dataStore.findAllSubscriptions(); }
+
+    public Person findPersonByEmail(String email) { return dataStore.findPersonByEmail(email); }
 
     public Person findPersonById(int id) { return dataStore.findPersonById(id); }
 
