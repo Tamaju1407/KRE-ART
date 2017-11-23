@@ -29,6 +29,10 @@ public class PersonsEntity extends BaseEntity {
         return null;
     }
 
+    public List<Person> findByCategory(String category){
+        return findByCriteria(String.format("WHERE person_category = '%s'", category));
+    }
+
     public Person findById(int id){
         return findByCriteria(
                 String.format("WHERE person_id = %d", id)).get(0);

@@ -39,6 +39,10 @@ public class KreartService {
 
     public PersonAll createPersonAll(Person person) { return dataStore.createPersonAll(person); }
 
+    public List<Image> findAllImagesByPerson(Person person) { return dataStore.findAllImagesByPerson(person); }
+
+    public List<Person> findAllPersonsByCategory (String category) { return dataStore.findAllPersonsByCategory(category); }
+
     public List<Person> findAllPersons() { return dataStore.findAllPersons(); }
 
     public List<Talent> findAllTalents() { return dataStore.findAllTalent(); }
