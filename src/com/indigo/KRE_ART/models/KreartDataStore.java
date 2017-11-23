@@ -65,9 +65,17 @@ public class KreartDataStore {
         return getSubscriptionsEntity().findById(id, getPersonsEntity());
     }
 
+    public List<Coment> findAllComentsByPerson(Person person) { return connection == null ? null: getComentsEntity().findByPerson(person,getPersonsEntity(),getImagesEntity()); }
+
     public List<Person> findAllPersonsByCategory(String category) { return connection == null ? null: getPersonsEntity().findByCategory(category); }
 
+    public List<Talent> findAllTalentsByCategory(String category) { return connection == null ? null: getTalentsEntity().findByCategory(category,getPersonsEntity()); }
+
+    public List<Headhunter> findAllHeadHuntersByCategory(String category) { return connection == null ? null: getHeadhuntersEntity().findByCategory(category,getPersonsEntity()); }
+
     public List<Image> findAllImagesByPerson(Person person) { return connection == null ? null: getImagesEntity().findByPerson(person, getPersonsEntity());}
+
+    public List<Image> findImagesByRate() {return connection == null ? null : getImagesEntity().findByRate(getPersonsEntity()); }
 
     public List<Person> findAllPersons() { return connection == null ? null: getPersonsEntity().findAll();}
 
