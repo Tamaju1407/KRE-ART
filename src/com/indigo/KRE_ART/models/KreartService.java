@@ -41,7 +41,15 @@ public class KreartService {
 
     public List<Image> findAllImagesByPerson(Person person) { return dataStore.findAllImagesByPerson(person); }
 
+    public List<Image> findImagesByRate() { return dataStore.findImagesByRate(); }
+
+    public List<Coment> findAllComentsByPerson(Person person) { return dataStore.findAllComentsByPerson(person); }
+
     public List<Person> findAllPersonsByCategory (String category) { return dataStore.findAllPersonsByCategory(category); }
+
+    public List<Talent> findAllTalentsByCategory (String category) { return dataStore.findAllTalentsByCategory(category); }
+
+    public List<Headhunter> findAllHeadHuntersByCategory (String category) { return  dataStore.findAllHeadHuntersByCategory(category);}
 
     public List<Person> findAllPersons() { return dataStore.findAllPersons(); }
 
