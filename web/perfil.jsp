@@ -41,13 +41,15 @@
         <h5> Mi Perfil</h5>
         <div class="perfil">
             <img src="img/profile1.jpg">
-            <h5>Arturo Chavez García</h5>
-            <h6><i class="fa fa-pencil fa-fw "></i> Diseñador e Ilustrador</h6>
+            <h3>Arturo Chavez García</h3>
+            <div class="InfoPerfil">
+                <p>Estudiante de la Carrera de Diseño Gráfico, realiza todo tipo de trabajos de ilustración</p>
+                <p>Dni: 72925417</p>
+            </div>
         </div>
     </div>
-
     <div class="column2">
-        <h5> Mi Portafolio</h5>
+        <h3> Mi Portafolio</h3>
 
         <div class="photo">
             <a target="_blank" href="img/porta1.jpg"><img src="img/porta1.jpg" alt=""></a>
@@ -75,14 +77,16 @@
             <div class="desc">Perú Futbolista</div>
         </div>
     </div>
+
+    <div class="column3">
+        <h3> Contacto</h3>
+        <div class="contact">
+            <h3><i class="fa fa-envelope"></i> E-mail</h3>
+        </div>
+    </div>
+
 </div>
 
-<div class="column3">
-    <h5> Contacto</h5>
-    <div class="contact">
-        <h5><i class="fa fa-envelope"></i> E-mail</h5>
-    </div>
-</div>
 </body>
 
 <footer>
