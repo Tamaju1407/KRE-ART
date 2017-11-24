@@ -33,6 +33,8 @@ public class ImagesEntity extends BaseEntity {
         return findByCriteria("", personsEntity);
     }
 
+    public List<Image> findByRate (PersonsEntity personsEntity) { return findByCriteria("WHERE image_rate = 5",personsEntity); }
+
     public Image findById(int id, PersonsEntity personsEntity){
         return findByCriteria(
                 String.format("WHERE image_id = %d", id), personsEntity).get(0);

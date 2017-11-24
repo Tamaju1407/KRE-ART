@@ -38,6 +38,10 @@ public class ComentsEntity extends BaseEntity {
                 String.format("WHERE coment_id = %d", id), personsEntity, imagesEntity).get(0);
     }
 
+    public List<Coment> findByPerson (Person person, PersonsEntity personsEntity, ImagesEntity imagesEntity){
+        return findByCriteria(String.format("WHERE personsend_id = %d",person.getId()),personsEntity,imagesEntity);
+    }
+
     public List<Coment> findAllBySend(Person person, PersonsEntity personsEntity, ImagesEntity imagesEntity){
         return findByCriteria(String.format("WHERE personsend_id = %d", person.getId()), personsEntity, imagesEntity);
     }

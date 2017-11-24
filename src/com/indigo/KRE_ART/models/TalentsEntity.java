@@ -29,13 +29,15 @@ public class TalentsEntity extends BaseEntity {
         return null;
     }
 
+    public List<Talent> findByCategory (String category, PersonsEntity personsEntity) { return findByCriteria(String.format("WHERE talent_category = '%s'", category), personsEntity); }
+
     public List<Talent> findAll(PersonsEntity personsEntity){
         return findByCriteria("", personsEntity);
     }
 
     public Talent findById(int id, PersonsEntity personsEntity){
         return findByCriteria(
-                String.format("WHERE image_id = %d", id), personsEntity).get(0);
+                String.format("WHERE talent_id = %d", id), personsEntity).get(0);
     }
 
     public Talent findByPerson(Person person, PersonsEntity personsEntity){

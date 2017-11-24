@@ -29,13 +29,15 @@ public class HeadhuntersEntity extends BaseEntity {
         return null;
     }
 
+    public List<Headhunter> findByCategory(String category, PersonsEntity personsEntity) { return findByCriteria(String.format("WHERE headhunter_category = '%s'",category), personsEntity); }
+
     public List<Headhunter> findAll(PersonsEntity personsEntity){
         return findByCriteria("", personsEntity);
     }
 
     public Headhunter findById(int id, PersonsEntity personsEntity){
         return findByCriteria(
-                String.format("WHERE image_id = %d", id), personsEntity).get(0);
+                String.format("WHERE headhunter_id = %d", id), personsEntity).get(0);
     }
 
     public Headhunter findByPerson(Person person, PersonsEntity personsEntity){
