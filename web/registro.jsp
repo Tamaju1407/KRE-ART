@@ -27,8 +27,8 @@
 		<span class="fa fa-lock"></span>Contraseña<input class="input"  type="password"  placeholder="crea una contraseña" required>
 
 		<div class="opciones" action="">
-			<input type="radio" name="gender" value="nuevo talento" checked> Nuevo talento<br>
-			<input type="radio" name="gender" value="busca talento">Caza talento<br>
+			<input type="checkbox" name="gender" value="nuevo talento" checked> Nuevo talento<br>
+			<input type="checkbox" name="gender" value="busca talento">Caza talento<br>
 			<input class="input"  type="text"  placeholder=" " required>
 		</div>
 
