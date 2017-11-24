@@ -118,6 +118,7 @@ ul,ol{
 	display: flex;
 	justify-content: space-around;
 	margin-top: 1rem;
+	cursor: pointer;
 }
 
 .input{
@@ -176,6 +177,10 @@ ul,ol{
 	flex-direction: column;
 	margin-top: 1rem;
 	padding: 0 80px;
+}
+
+.btn{
+	cursor: pointer;
 }
 
 input[type=text], [type=password], [type=email]{
@@ -269,16 +274,14 @@ div.desc {
 .column {
 	float: left;
 	width:400px;
-	height: 500px;
-	padding: auto;
-	margin: auto;
+	height: 650px;
 	margin-left: 20px;
 	margin-bottom: 20px;
 	background-color: #E6E6E6;
 }
 
 .perfil img{
-	width: 300px;
+	width: 200px;
 	height: auto;
 	border-radius: 250px;
 	margin: auto;
@@ -298,11 +301,49 @@ h6{
 	text-align: center;
 }
 
+.InfoPerfil, .contact{
+	text-align: justify;
+	font-size: 18px;
+	margin: 20px;
+}
+
+
+
+.clasificacion{
+	width: 250px;
+	margin: 0 auto;
+	height: 50px;
+	text-align: center;
+}
+
+.clasificacion label {
+	font-size: 25px;
+}
+
+input[type="radio"] {
+	display: none;
+}
+
+label {
+	color: grey;
+}
+
+.clasificacion {
+	direction: rtl;
+	unicode-bidi: bidi-override;
+}
+
+input[type="radio"]:checked ~ label {
+	color: orange;
+}
+
+
+
+/* */
 .column2{
-	float: left;
+	float: right;
 	width:900px;
 	height: 650px;
-	padding: auto;
 	margin: auto;
 	margin-left: 20px;
 	margin-bottom: 20px;
@@ -323,24 +364,17 @@ div.photo img {
 	height: auto;
 }
 
+
 .column3 {
+	clear: left;
 	float: left;
 	width:400px;
-	margin-left: 20px;;
+	height: 205px;
+	margin-left: 20px;
+	margin-bottom: 20px;
 	background-color: #E6E6E6;
-	position: absolute;
+
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /*busqueda*/
 
@@ -406,7 +440,3 @@ footer .derechos {
 	font-size: 12px;
 	letter-spacing: 2px;
 }
-
-
-/* responsive*/
-
