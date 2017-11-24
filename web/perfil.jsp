@@ -18,8 +18,6 @@
     <header>
         <a href="index.jsp"><img src="img/logo.png"></a>
     </header>
-
-
 </head>
 
 <body>
@@ -42,9 +40,22 @@
         <div class="perfil">
             <img src="img/profile1.jpg">
             <h3>Arturo Chavez García</h3>
+            <h3>Nuevo talento - Ilustrador</h3>
+            <div class="clasificacion">
+                <input id="radio1" type="radio" name="estrellas" value="5"><!--
+    						--><label for="radio1">★</label><!--
+   					 --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+    						--><label for="radio2">★</label><!--
+    				 --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+   							 --><label for="radio3">★</label><!--
+   					 --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+   							 --><label for="radio4">★</label><!--
+   					 --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+   							 --><label for="radio5">★</label>
+            </div>
             <div class="InfoPerfil">
-                <p>Estudiante de la Carrera de Diseño Gráfico, realiza todo tipo de trabajos de ilustración</p>
                 <p>Dni: 72925417</p>
+                <p>Estudiante de la Carrera de Diseño Gráfico, desarrollo proyectos gráficos en diferentes estilos y creo que mientras más complejo es el reto, es mayor la satisfacción.</p>
             </div>
         </div>
     </div>
@@ -52,7 +63,7 @@
         <h3> Mi Portafolio</h3>
 
         <div class="photo">
-            <a target="_blank" href="img/porta1.jpg"><img src="img/porta1.jpg" alt=""></a>
+            <a target="_blank" href="img.jsp"><img src="img/porta1.jpg" alt=""></a>
             <div class="desc">Escudo Nacional Peruano</div>
         </div>
         <div class="photo">
@@ -76,17 +87,31 @@
             </a>
             <div class="desc">Perú Futbolista</div>
         </div>
+        <div class="photo">
+            <a target="_blank" href="img/porta7.jpg"><img src="img/porta7.jpg" alt=""></a>
+            <div class="desc">Perú Futbolista</div>
+        </div>
+        <div class="photo">
+            <a target="_blank" href="img/porta8.jpg"><img src="img/porta8.jpg" alt=""></a>
+            <div class="desc"> Torito Pukará</div>
+        </div>
+        <div class="photo">
+            <a target="_blank" href="img/porta9.jpg"><img src="img/porta9.jpg" alt="">
+            </a>
+            <div class="desc">Perú Futbolista</div>
+        </div>
     </div>
 
     <div class="column3">
         <h3> Contacto</h3>
         <div class="contact">
-            <h3><i class="fa fa-envelope"></i> E-mail</h3>
+            <p><span class="fa fa-home"></span> Av. Perú 452, San martín de Porres</p>
+            <p><span class="fa fa-phone-square"></span> 936 138 926</p>
+            <p><span class="fa fa-envelope-square"></span> harturochg@outlook.com</p>
         </div>
     </div>
 
 </div>
-
 </body>
 
 <footer>
@@ -106,6 +131,4 @@
     </ul>
     <p class="derechos">© 2017 Indigo Recycle. All Rights Reserved</p>
 </footer>
-
-
 </html>
