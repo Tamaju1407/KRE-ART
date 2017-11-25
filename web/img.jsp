@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: PC01
@@ -35,7 +36,7 @@
 </div>
 
 <div class="zoom">
-    <img src="img/porta1.jpg" alt="">
+    <center><img width="80%" src="${image.url}" alt=""></center>
     <div class="desc">Escudo Nacional Peruano</div>
 </div>
 
@@ -44,11 +45,11 @@
         <li>
             <div class="comment-main-level">
                 <!-- Avatar -->
-                <div class="comment-avatar"><img src="img/avatar_1.jpg" alt=""></div>
+                <div class="comment-avatar"><img src="${image.person.profile}" alt=""></div>
                 <!-- Contenedor del Comentario -->
                 <div class="comment-box">
                     <div class="comment-head">
-                        <h6 class="comment-name by-author"><a href="">Arturo Chavez García</a></h6>
+                        <h6 class="comment-name by-author"><a href="">${image.person.name}</a></h6>
                         <span>hace 20 minutos</span>
                         <i class="fa fa-reply"></i>
                         <i class="fa fa-heart"></i>
@@ -59,26 +60,27 @@
                     </div>
                 </div>
             </div>
-
+            <c:forEach var="coment" items="${coments}">
             <!-- Respuestas de los comentarios -->
             <ul class="comments-list reply-list">
                 <li>
                     <!-- Avatar -->
-                    <div class="comment-avatar"><img src="img/avatar_2.jpg" alt=""></div>
+                    <div class="comment-avatar"><img src="${coment.personsend.profile}" alt=""></div>
                     <!-- Contenedor del Comentario -->
                     <div class="comment-box">
                         <div class="comment-head">
-                            <h6 class="comment-name"><a href="">Juan Durand</a></h6>
+                            <h6 class="comment-name"><a href="">${coment.personsend.name}</a></h6>
                             <span>hace 10 minutos</span>
                             <i class="fa fa-reply"></i>
                             <i class="fa fa-heart"></i>
                         </div>
                         <div class="comment-content">
-                            Increíble el trabajo de bro, sigue deleitandonos con tu arte 👏👏👏
+                            ${coment.message}
                         </div>
                     </div>
                 </li>
             </ul>
+            </c:forEach>
         </li>
     </ul>
     <div id="comment_form">

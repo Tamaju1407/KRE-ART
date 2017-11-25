@@ -43,6 +43,8 @@ public class KreartService {
 
     public List<Coment> findAllComentsByPerson(Person person) { return dataStore.findAllComentsByPerson(person); }
 
+    public List<Coment> findAllComentsByImage(Image image) { return  dataStore.findAllComentsByImage(image); }
+
     public List<Person> findAllPersonsByCategory (String category) { return dataStore.findAllPersonsByCategory(category); }
 
     public List<Talent> findAllTalentsByCategory (String category) { return dataStore.findAllTalentsByCategory(category); }

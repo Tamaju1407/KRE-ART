@@ -75,6 +75,8 @@ public class KreartDataStore {
 
     public List<Image> findAllImagesByPerson(Person person) { return connection == null ? null: getImagesEntity().findByPerson(person, getPersonsEntity());}
 
+    public List<Coment> findAllComentsByImage(Image image) { return connection == null ? null: getComentsEntity().findAllByImage(image, getPersonsEntity(), getImagesEntity()); }
+
     public List<Image> findImagesByRate() {return connection == null ? null : getImagesEntity().findByRate(getPersonsEntity()); }
 
     public List<Person> findAllPersons() { return connection == null ? null: getPersonsEntity().findAll();}

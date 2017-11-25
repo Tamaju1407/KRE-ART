@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@javax.servlet.annotation.WebServlet(name = "FillAction", urlPatterns = "/fill")
+@javax.servlet.annotation.WebServlet(name = "FillAction", urlPatterns = "/fillin")
 public class FillAction {
     KreartService service;
     String url;
@@ -80,6 +80,14 @@ public class FillAction {
                 List<Coment> coments = service.findAllComentsByPerson(service.findPersonById(id));
                 request.setAttribute("coments", coments);
                 url = "imagen.jsp";
+            }
+            if (action.equals("imgs")){
+                int id = Integer.parseInt(request.getParameter("id"));
+                Image image = service.findImageById(id);
+                List<Coment> coments = service.findAllComentsByImage(image);
+                request.setAttribute("image", image);
+                request.setAttribute("coments", coments);
+                url = "img.jsp";
             }
         }
 

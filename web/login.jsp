@@ -1,8 +1,7 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta charset="utf-8">
-
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 	<title>Kreart</title>
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="css/font-awesome.css">
@@ -25,7 +24,7 @@
 
 		<input class="btn" type="submit" value="ENTRAR">
 		<br>
-		<input class="btn_name" type="name" value="Error">
+		<input class="btn_name" type="name" value="${error}" >
 		<p class="form_recover"><a href="#">¿olvidaste la contraseña?</a></p>
 	</form>
 
