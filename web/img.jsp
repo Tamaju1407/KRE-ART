@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/font-awesome.css">
 
     <header>
-        <a href="index.jsp"><img src="img/logo.png"></a>
+        <a href="index.html"><img src="img/logo.png"></a>
     </header>
 </head>
 
@@ -27,9 +27,9 @@
     </div>
     <nav>
         <ul class="menu">
-            <li><a href="inicio.jsp">Inicio</a></li>
-            <li><a href="perfil.jsp">Mi perfil</a></li>
-            <li><a href="busqueda.jsp">Búsqueda</a></li>
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="perfil.html">Mi perfil</a></li>
+            <li><a href="busqueda.html">Búsqueda</a></li>
         </ul>
     </nav>
 </div>
@@ -81,6 +81,14 @@
             </ul>
         </li>
     </ul>
+    <div id="comment_form">
+        <div>
+            <textarea rows="10" name="comment" id="comment" placeholder="Comment"></textarea>
+        </div>
+        <div>
+            <input type="submit" name="submit" value="Add Comment">
+        </div>
+    </div>
 </div>
 
 </body>
