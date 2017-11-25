@@ -184,6 +184,16 @@ ul,ol{
 .btn{
 	cursor: pointer;
 }
+.btn_name{
+	background-color: #B40404;
+	width: 70%;
+	color: white;
+	border-radius: 5px;
+	border: none;
+	padding: 5px;
+	text-align: center;
+	margin-left: 50px;
+}
 
 input[type=text], [type=password], [type=email]{
 	background-color: #FAFAFA;
@@ -209,21 +219,6 @@ input[type=text], [type=password], [type=email]{
 	padding: .5rem;
 	margin-left:100px;
 
-}
-
-.error{
-	background-color: #6E6E6E;
-	text-align: center;
-	width: 50%;
-	color: white;
-	border-radius: 7px;
-	border: none;
-	padding: .5rem;
-	margin-left:100px;
-
-}
-.error:hover{
-	background-color: #424242;
 }
 
 .btn:hover{
@@ -565,6 +560,23 @@ div.photo img {
 }
 
 
+#comment_form input, #comment_form textarea {
+	border: 2px solid #D8D8D8;
+	font-family: calibri;
+	font-size: 12px;
+	padding: 8px 10px;
+	border-radius:5px;
+}
+
+#comment_form textarea {
+	width: 850px;
+}
+
+#comment_form input[type="submit"] {
+	cursor: pointer;
+	color: #000;
+	border: none;
+}
 
 /*busqueda*/
 
