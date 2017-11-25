@@ -16,9 +16,7 @@ public class KreartService {
         try {
             InitialContext context = new InitialContext();
             dataStore = new KreartDataStore();
-            connection = ((DataSource) context
-                    .lookup("jdbc/MySQLDataSource"))
-                    .getConnection();
+            connection = ((DataSource)context.lookup("MySQLDataSource")).getConnection();
             dataStore.setConnection(connection);
         } catch (NamingException e) {
             e.printStackTrace();

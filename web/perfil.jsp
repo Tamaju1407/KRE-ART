@@ -38,9 +38,9 @@
     <div class="column">
         <h5> Mi Perfil</h5>
         <div class="perfil">
-            <img src="img/profile1.jpg">
-            <h3>Arturo Chavez García</h3>
-            <h3>Nuevo talento - Ilustrador</h3>
+            <img src="${personall.profile}">
+            <h3>${personall.name}</h3>
+            <h3>${personall.type} - ${personall.category}</h3>
             <div class="clasificacion">
                 <input id="radio1" type="radio" name="estrellas" value="5"><!--
     						--><label for="radio1">★</label><!--

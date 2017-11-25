@@ -18,11 +18,14 @@
 		<h2 class="login title">Ingresa a tu cuenta</h2>
 	</div>
 
-	<form class="login_form">
-		<span class="fa fa-user-circle"></span>Usuario<input type="text" usuario required autofocus>
-		<span class="fa fa-lock"></span>Contraseña<input type="password" clave required>
+	<form action="login" class="login_form" method="post">
+		<input type="hidden" name="action" value="verify"/>
+		<span class="fa fa-user-circle"></span>Usuario<input type="text" name="email" id="email" required autofocus>
+		<span class="fa fa-lock"></span>Contraseña<input type="password" name="password" id="password" required>
 
-		<input class="btn" type="#" value="ENTRAR">
+		<input class="btn" type="submit" value="ENTRAR">
+		<br>
+		<input class="btn" value="${error}">
 		<p class="form_recover"><a href="#">¿Olvidaste la contraseña?</a></p>
 	</form>
 
