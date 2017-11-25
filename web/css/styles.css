@@ -358,7 +358,7 @@ input[type="radio"]:checked ~ label {
 	float: right;
 	width:870px;
 	height: 875px;
-	margin: 0 12px;
+	margin: 0 20px;
 	margin-left: 20px;
 	margin-bottom: 20px;
 	background-color: #E6E6E6;
@@ -665,8 +665,8 @@ footer .derechos {
 }
 
 
-/* responsive*/
 
+/* responsive*/
 @media only screen and (max-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
 	.cont-galery{
 		margin:0px 0px;
@@ -686,12 +686,29 @@ footer .derechos {
 		margin-bottom: 20px;
 		background-color: #E6E6E6;
 	}
+
+	.column3 {
+		float: left;
+		width:88%;
+		margin-left: 20px;
+		margin-bottom: 20px;
+		background-color: #E6E6E6;
+	}
 	div.photo {
 		margin: 10px;
 		display: inline-block;
 		margin-left: 35px;
 		margin-right: 35px;
 		width: 75%;
+	}
+	.form_reg {
+		padding: 0 4%;
+	}
+	.form_reg .input {
+		width: 92%;
+	}
+	.form_reg span {
+		width: 32%;
 	}
 }
 @media only screen and (min-device-width: 321px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -705,6 +722,10 @@ footer .derechos {
 		width: 88%;
 
 	}
+	.column3 {
+		width: 88%;
+
+	}
 	div.photo {
 		margin: 10px;
 		display: inline-block;
@@ -712,15 +733,28 @@ footer .derechos {
 		margin-right: 35px;
 		width: 75%;
 	}
+	.form_reg {
+		padding: 0 4%;
+	}
+	.form_reg .input {
+		width: 92%;
+	}
+	.form_reg span {
+		width: 32%;
+	}
+
 }
 @media only screen and (min-device-width: 481px) and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
 	.cont-galery{
-		margin:0px 8%;
+		margin:0 8%;
 	}
 	.column {
 		width: 40%;
 	}
 	.column2 {
+		width: 53%;
+	}
+	.column3 {
 		width: 53%;
 	}
 	div.photo {
@@ -733,7 +767,7 @@ footer .derechos {
 }
 @media only screen and (min-device-width: 769px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
 	.cont-galery{
-		margin:0px 2%;
+		margin:0 2%;
 	}
 	.column {
 		width: 25%;
@@ -741,17 +775,20 @@ footer .derechos {
 	.column2 {
 		width: 69%;
 	}
+	.column3 {
+		width: 25%;
+	}
 }
 @media only screen  and (min-device-width: 1025px)and (max-device-width: 1440px) and (-webkit-min-device-pixel-ratio: 2) {
 	.cont-galery{
-		margin:0px 16%;
+		margin:0 16%;
 
 	}
 
 }
 @media only screen  and (min-device-width: 1441px)and (max-device-width: 2560px) and (-webkit-min-device-pixel-ratio: 2) {
 	.cont-galery{
-		margin:0px 31%;
+		margin:0 31%;
 
 	}
 
