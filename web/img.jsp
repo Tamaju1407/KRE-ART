@@ -60,14 +60,12 @@
                 </div>
             </div>
 
-
+            <!-- Respuestas de los comentarios -->
             <ul class="comments-list reply-list">
                 <li>
-
-                    
+                    <!-- Avatar -->
                     <div class="comment-avatar"><img src="img/avatar_2.jpg" alt=""></div>
-
-
+                    <!-- Contenedor del Comentario -->
                     <div class="comment-box">
                         <div class="comment-head">
                             <h6 class="comment-name"><a href="">Juan Durand</a></h6>
@@ -76,7 +74,7 @@
                             <i class="fa fa-heart"></i>
                         </div>
                         <div class="comment-content">
-                            Increíble el trabajo de men, sigue deleitandonos con tu arte 👏👏👏
+                            Increíble el trabajo de bro, sigue deleitandonos con tu arte 👏👏👏
                         </div>
                     </div>
                 </li>

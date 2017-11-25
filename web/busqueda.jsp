@@ -38,30 +38,70 @@
 </div>
 
 <div class="header-top">
-
     <input type="search"  id="input-search" placeholder="buscar...">
-
-
 </div>
 
-
-
-
-
-<div class="info">
-    <p>
-        CATEGORÍAS:</p>
-
-    <p>Encontrarás la catégorías que más se adecue al</p>
-
-    <nav class="navegadores">
-        <a href="#">ILUSTRADORES</a>
-        <a href="#">FOTOGRAFOS</a>
-        <a href="#">PINTORES</a>
-        <a href="#">ESCULTORES</a>
-    </nav>
-
-</div>
+<div class="row">
+    <div class="columna">
+        <div class="card">
+            <img src="img/perfil1.jpg" style="width:100%">
+            <div class="contenedor">
+                <h2>Arturo Chavez García</h2>
+                <p>Diseñador & Ilustrador</p>
+                <a class="button" href="perfil.jsp">Ver Perfil</a>
+            </div>
+        </div>
+    </div>
+    <div class="columna">
+        <div class="card">
+            <img src="img/perfil2.jpg" style="width:100%">
+            <div class="contenedor">
+                <h2>Manuel Mescco cano</h2>
+                <p>Fotógrafo</p>
+                <a class="button" href="perfil.jsp">Ver Perfil</a>
+            </div>
+        </div>
+    </div>
+    <div class="columna">
+        <div class="card">
+            <img src="img/perfil3.jpg" style="width:100%">
+            <div class="contenedor">
+                <h2>Victoria Fuentes Solis</h2>
+                <p>Fotógrafa</p>
+                <a class="button" href="perfil.jsp">Ver Perfil</a>
+            </div>
+        </div>
+    </div>
+    <div class="columna">
+        <div class="card">
+            <img src="img/perfil4.jpg" style="width:100%">
+            <div class="contenedor">
+                <h2>Joel Ramos Carbajal</h2>
+                <p>Ilustrador</p>
+                <a class="button" href="perfil.jsp">Ver Perfil</a>
+            </div>
+        </div>
+    </div>
+    <div class="columna">
+        <div class="card">
+            <img src="img/perfil5.jpg" style="width:100%">
+            <div class="contenedor">
+                <h2>Omar campos campos</h2>
+                <p>Diseñador Gráfico</p>
+                <a class="button" href="perfil.jsp">Ver Perfil</a>
+            </div>
+        </div>
+    </div>
+    <div class="columna">
+        <div class="card">
+            <img src="img/perfil6.jpg" style="width:100%">
+            <div class="contenedor">
+                <h2>Ayrton cardenas Lavado</h2>
+                <p>Pintor</p>
+                <a class="button" href="perfil.jsp">Ver Perfil</a>
+            </div>
+        </div>
+    </div>
 </body>
 
 <footer>
