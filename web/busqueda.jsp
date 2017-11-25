@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: PC01
@@ -42,65 +43,18 @@
 </div>
 
 <div class="row">
+    <c:forEach var="personall" items="${personalls}">
     <div class="columna">
         <div class="card">
-            <img src="img/perfil1.jpg" style="width:100%">
+            <img src="${personall.profile}" style="width:100%">
             <div class="contenedor">
-                <h2>Arturo Chavez García</h2>
-                <p>Diseñador & Ilustrador</p>
+                <h2>${personall.name}</h2>
+                <p>${personall.type} - ${personall.category}</p>
                 <a class="button" href="perfil.jsp">Ver Perfil</a>
             </div>
         </div>
     </div>
-    <div class="columna">
-        <div class="card">
-            <img src="img/perfil2.jpg" style="width:100%">
-            <div class="contenedor">
-                <h2>Manuel Mescco cano</h2>
-                <p>Fotógrafo</p>
-                <a class="button" href="perfil.jsp">Ver Perfil</a>
-            </div>
-        </div>
-    </div>
-    <div class="columna">
-        <div class="card">
-            <img src="img/perfil3.jpg" style="width:100%">
-            <div class="contenedor">
-                <h2>Victoria Fuentes Solis</h2>
-                <p>Fotógrafa</p>
-                <a class="button" href="perfil.jsp">Ver Perfil</a>
-            </div>
-        </div>
-    </div>
-    <div class="columna">
-        <div class="card">
-            <img src="img/perfil4.jpg" style="width:100%">
-            <div class="contenedor">
-                <h2>Joel Ramos Carbajal</h2>
-                <p>Ilustrador</p>
-                <a class="button" href="perfil.jsp">Ver Perfil</a>
-            </div>
-        </div>
-    </div>
-    <div class="columna">
-        <div class="card">
-            <img src="img/perfil5.jpg" style="width:100%">
-            <div class="contenedor">
-                <h2>Omar campos campos</h2>
-                <p>Diseñador Gráfico</p>
-                <a class="button" href="perfil.jsp">Ver Perfil</a>
-            </div>
-        </div>
-    </div>
-    <div class="columna">
-        <div class="card">
-            <img src="img/perfil6.jpg" style="width:100%">
-            <div class="contenedor">
-                <h2>Ayrton cardenas Lavado</h2>
-                <p>Pintor</p>
-                <a class="button" href="perfil.jsp">Ver Perfil</a>
-            </div>
-        </div>
+    </c:forEach>
     </div>
 </body>
 

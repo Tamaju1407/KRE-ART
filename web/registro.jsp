@@ -31,7 +31,7 @@
 				<option value="1" checked>Nuevo Talento</option>
 				<option value="2">Caza Talento</option>
 			</select>
-			
+
 			<input class="input"  type="text"  placeholder=" " required>
 		</div>
 

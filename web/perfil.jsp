@@ -30,7 +30,7 @@
         <ul class="menu">
             <li><a href="inicio.jsp">Inicio</a></li>
             <li><a href="perfil.jsp">Mi perfil</a></li>
-            <li><a href="busqueda.jsp">Búsqueda</a></li>
+            <li><a href="login?action=search">Búsqueda</a></li>
         </ul>
     </nav>
 </div>

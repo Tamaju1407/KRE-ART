@@ -5,6 +5,7 @@ import com.indigo.KRE_ART.models.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 @javax.servlet.annotation.WebServlet(name = "LoginAction", urlPatterns = "/login")
@@ -89,6 +90,17 @@ public class LoginAction extends javax.servlet.http.HttpServlet{
                     n++;
                 }
                 request.setAttribute("persons", persons);
+                url = "busqueda.jsp";
+            }
+            if (action.equals("search")){
+                List<Person> persons = service.findAllPersons();
+                int n = 0;
+                List<PersonAll> personalls = new ArrayList<>();
+                while(n != persons.size()) {
+                    personalls.add(service.createPersonAll(persons.get(n)));
+                    n = n + 1;
+                }
+                request.setAttribute("personalls", personalls);
                 url = "busqueda.jsp";
             }
             if (action.equals("searchemail")){
