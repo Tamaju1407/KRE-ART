@@ -19,16 +19,19 @@
 		<h2>Registro de usuario</h2>
 	</div>
 	<form class="form_reg" action="">
-		<span class="fa fa-user"></span>Nombres<input class="input" type="text" placeholder="Ingresa nombre y apellidos completos" required>
-		<span class="fa fa-id-card"></span>D.N.I<input class="input" type="text" placeholder=" Ingresa 8 digitos" required>
-		<span class="fa fa-phone-square"></span>Telefono<input class="input" type="text" placeholder=" Ingresa 9 numeros" required>
-		<span class="fa fa-envelope"></span>Email<input class="input"  type="email"  placeholder="Ingresa correo electronico" required>
-		<span class="fa fa-home"></span>Direccion<input class="input" type="text" placeholder=" Ejm: Av. Perú 3624, San Martín de porres" required>
-		<span class="fa fa-lock"></span>Contraseña<input class="input"  type="password"  placeholder="crea una contraseña" required>
+		<span class="fa fa-user"></span>Nombres<input class="input" name="name" id="name" type="text" placeholder="Ingresa nombre y apellidos completos" required>
+		<span class="fa fa-id-card"></span>D.N.I<input class="input" name="dni" id="dni" type="text" placeholder=" Ingresa 8 digitos" required>
+		<span class="fa fa-phone-square"></span>Telefono<input class="input" name="cellphone" id="cellphone" type="text" placeholder=" Ingresa 9 numeros" required>
+		<span class="fa fa-envelope"></span>Email<input class="input" name="email" id="email" type="email"  placeholder="Ingresa correo electronico" required>
+		<span class="fa fa-home"></span>Direccion<input class="input" name="location" id="location" type="text" placeholder=" Ejm: Av. Perú 3624, San Martín de porres" required>
+		<span class="fa fa-lock"></span>Contraseña<input class="input"  name="password" id="password" type="password"  placeholder="crea una contraseña" required>
 
 		<div class="opciones" action="">
-			<input type="checkbox" name="gender" value="nuevo talento" checked> Nuevo talento<br>
-			<input type="checkbox" name="gender" value="busca talento">Caza talento<br>
+			<select name="type" id="type" type="checkbox">
+				<option value="1" checked>Nuevo Talento</option>
+				<option value="2">Caza Talento</option>
+			</select>
+			
 			<input class="input"  type="text"  placeholder=" " required>
 		</div>
 

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: PC01
@@ -54,60 +55,29 @@
    							 --><label for="radio5">★</label>
             </div>
             <div class="InfoPerfil">
-                <p>Dni: 72925417</p>
-                <p>Estudiante de la Carrera de Diseño Gráfico, desarrollo proyectos gráficos en diferentes estilos y creo que mientras más complejo es el reto, es mayor la satisfacción.</p>
+                <p>Dni: ${personall.dni}</p>
+                <p>${personall.description}</p>
             </div>
         </div>
     </div>
     <div class="column2">
         <h3> Mi Portafolio</h3>
 
+        <c:forEach var="image" items="${images}">
         <div class="photo">
-            <a target="_blank" href="img.jsp"><img src="img/porta1.jpg" alt=""></a>
-            <div class="desc">Escudo Nacional Peruano</div>
+            <a target="_blank" href="login?action=imgs&id=${image.id}"><img src="${image.url}" alt=""></a>
+            <div class="desc">${image.rate}</div>
         </div>
-        <div class="photo">
-            <a target="_blank" href="img/porta2.jpg"><img src="img/porta2.jpg" alt=""></a>
-            <div class="desc">Perú Futbolista</div>
-        </div>
-        <div class="photo">
-            <a target="_blank" href="img/porta3.jpg"><img src="img/porta3.jpg" alt=""></a>
-            <div class="desc"> Torito Pukará</div>
-        </div>
-        <div class="photo">
-            <a target="_blank" href="img/porta4.jpg"><img src="img/porta4.jpg" alt=""></a>
-            <div class="desc">Perú Futbolista</div>
-        </div>
-        <div class="photo">
-            <a target="_blank" href="img/porta5.jpg"><img src="img/porta5.jpg" alt=""></a>
-            <div class="desc"> Torito Pukará</div>
-        </div>
-        <div class="photo">
-            <a target="_blank" href="img/porta6.jpg"><img src="img/porta6.jpg" alt="">
-            </a>
-            <div class="desc">Perú Futbolista</div>
-        </div>
-        <div class="photo">
-            <a target="_blank" href="img/porta7.jpg"><img src="img/porta7.jpg" alt=""></a>
-            <div class="desc">Perú Futbolista</div>
-        </div>
-        <div class="photo">
-            <a target="_blank" href="img/porta8.jpg"><img src="img/porta8.jpg" alt=""></a>
-            <div class="desc"> Torito Pukará</div>
-        </div>
-        <div class="photo">
-            <a target="_blank" href="img/porta9.jpg"><img src="img/porta9.jpg" alt="">
-            </a>
-            <div class="desc">Perú Futbolista</div>
-        </div>
+        </c:forEach>
+
     </div>
 
     <div class="column3">
         <h3> Contacto</h3>
         <div class="contact">
-            <p><span class="fa fa-home"></span> Av. Perú 452, San martín de Porres</p>
-            <p><span class="fa fa-phone-square"></span> 936 138 926</p>
-            <p><span class="fa fa-envelope-square"></span> harturochg@outlook.com</p>
+            <p><span class="fa fa-home"></span> ${personall.location}</p>
+            <p><span class="fa fa-phone-square"></span> ${personall.cellphone}</p>
+            <p><span class="fa fa-envelope-square"></span> ${personall.email}</p>
         </div>
     </div>
 
