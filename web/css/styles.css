@@ -1,6 +1,6 @@
 html{
 	font-size: 16px;
-	font-family: 'calibri'
+	font-family: 'calibri';
 }
 body{
 	padding: 0;
@@ -77,8 +77,6 @@ ul,ol{
 	background-color: #424242;
 }
 
-
-
 /*REGISTRO*/
 
 .container{
@@ -105,6 +103,13 @@ ul,ol{
 	padding: 0 10rem;
 	display: flex;
 	flex-direction: column;
+}
+
+.form_reg span {
+	width: 25%;
+}
+.form_reg .input {
+	width: 70%;
 }
 
 .opciones{
@@ -220,7 +225,7 @@ input[type=text], [type=password], [type=email]{
 	background: #000000;
 }
 .navegacion nav{
-	width: 90%;
+	width: 100%;
 }
 .boton-menu{
 	display: none;
@@ -228,6 +233,8 @@ input[type=text], [type=password], [type=email]{
 .menu{
 	list-style: none;
 	width: 100%;
+	margin-left:0;
+	padding:0;
 }
 .menu li{
 	display: inline-block;
@@ -252,7 +259,6 @@ div.gallery {
 	width: 280px;
 	margin: 20px;
 	display: inline-block;
-	margin-left:115px;
 
 }
 
@@ -341,9 +347,7 @@ input[type="radio"]:checked ~ label {
 	float: right;
 	width:870px;
 	height: 875px;
-	margin: 0 20px;
-	margin-left: 20px;
-	margin-bottom: 20px;
+	margin: 0 20px 0;
 	background-color: #E6E6E6;
 }
 
@@ -361,7 +365,7 @@ div.photo img {
 	height: auto;
 }
 
-/*columnas*/
+
 .column3 {
 	clear: left;
 	float: left;
@@ -374,8 +378,9 @@ div.photo img {
 
 
 
-
-/* img*/
+.zoom{
+	text-align: center;
+}
 .comments-container {
 	margin: 60px auto 15px;
 	width: 768px;
@@ -467,9 +472,7 @@ div.photo img {
 	display: block;
 	clear: both;
 }
-/**
- * Caja del Comentario
- ---------------------------*/
+
 .comments-list .comment-box {
 	width: 680px;
 	float: right;
@@ -549,8 +552,6 @@ div.photo img {
 
 
 
-/*busqueda*/
-
 .info{
 	margin: auto;
 	width: 90%;
@@ -564,13 +565,13 @@ div.photo img {
 .header-top{
 	background: #FACC2E;
 	height: 50px;
-	padding: 20px;
+	padding:20px 20px 13px;
 
 }
 
 #input-search{
 
-	width: 600px;
+	width: 50%;
 	height: 40px;
 	font-size: 18px;
 	text-indent: 10px;
@@ -652,7 +653,7 @@ footer .derechos {
 /* responsive*/
 @media only screen and (max-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
 	.cont-galery{
-		margin:0px 0px;
+		margin:0 0;
 	}
 	.column {
 		float: left;
@@ -670,13 +671,6 @@ footer .derechos {
 		background-color: #E6E6E6;
 	}
 
-	.column3 {
-		float: left;
-		width:88%;
-		margin-left: 20px;
-		margin-bottom: 20px;
-		background-color: #E6E6E6;
-	}
 	div.photo {
 		margin: 10px;
 		display: inline-block;
@@ -688,24 +682,23 @@ footer .derechos {
 		padding: 0 4%;
 	}
 	.form_reg .input {
-		width: 92%;
+		width: 32%;
 	}
 	.form_reg span {
 		width: 32%;
 	}
+	.zoom{
+		text-align: center;
+	}
 }
 @media only screen and (min-device-width: 321px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
 	.cont-galery{
-		margin:0px 12%;
+		margin:0 12%;
 	}
 	.column {
 		width: 88%;
 	}
 	.column2 {
-		width: 88%;
-
-	}
-	.column3 {
 		width: 88%;
 
 	}
@@ -737,9 +730,6 @@ footer .derechos {
 	.column2 {
 		width: 53%;
 	}
-	.column3 {
-		width: 53%;
-	}
 	div.photo {
 		margin: 10px;
 		display: inline-block;
@@ -758,21 +748,21 @@ footer .derechos {
 	.column2 {
 		width: 69%;
 	}
-	.column3 {
-		width: 25%;
-	}
+
 }
-@media only screen  and (min-device-width: 1025px)and (max-device-width: 1440px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen  and (min-device-width: 1025px)and (max-device-width: 1440px) and (-webkit-min-device-pixel-ratio: 2){
 	.cont-galery{
 		margin:0 16%;
 
 	}
 
+	.rom{
+		margin: 0 16%;
+	}
 }
 @media only screen  and (min-device-width: 1441px)and (max-device-width: 2560px) and (-webkit-min-device-pixel-ratio: 2) {
 	.cont-galery{
 		margin:0 31%;
 
 	}
-
 }
