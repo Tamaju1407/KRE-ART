@@ -25,8 +25,8 @@
 
 		<input class="btn" type="submit" value="ENTRAR">
 		<br>
-		<input class="btn" value="${error}">
-		<p class="form_recover"><a href="#">¿Olvidaste la contraseña?</a></p>
+		<input class="btn_name" type="name" value="Error">
+		<p class="form_recover"><a href="#">¿olvidaste la contraseña?</a></p>
 	</form>
 
 </div>
