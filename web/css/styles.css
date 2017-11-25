@@ -184,15 +184,19 @@ ul,ol{
 .btn{
 	cursor: pointer;
 }
-.btn_name{
-	background-color: #B40404;
-	width: 70%;
+.alert {
+	padding: 10px;
+	background-color: #f44336;
 	color: white;
-	border-radius: 5px;
-	border: none;
-	padding: 5px;
 	text-align: center;
-	margin-left: 50px;
+}
+
+.closebtn {
+	width: 5px;
+	margin-left: 15px;
+	font-weight: bold;
+	font-size: 10px;
+	line-height: 5px;
 }
 
 input[type=text], [type=password], [type=email]{
