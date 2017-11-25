@@ -114,6 +114,8 @@ ul,ol{
 
 }
 
+
+
 .btn_form{
 	display: flex;
 	justify-content: space-around;
@@ -207,6 +209,21 @@ input[type=text], [type=password], [type=email]{
 	padding: .5rem;
 	margin-left:100px;
 
+}
+
+.error{
+	background-color: #6E6E6E;
+	text-align: center;
+	width: 50%;
+	color: white;
+	border-radius: 7px;
+	border: none;
+	padding: .5rem;
+	margin-left:100px;
+
+}
+.error:hover{
+	background-color: #424242;
 }
 
 .btn:hover{

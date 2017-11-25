@@ -1,9 +1,6 @@
 package com.indigo.KRE_ART.Actions;
 
-import com.indigo.KRE_ART.models.Image;
-import com.indigo.KRE_ART.models.KreartService;
-import com.indigo.KRE_ART.models.Person;
-import com.indigo.KRE_ART.models.PersonAll;
+import com.indigo.KRE_ART.models.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -36,22 +33,24 @@ public class LoginAction extends javax.servlet.http.HttpServlet{
             if(action.equals("verify")){
                 Person person = service.findPersonByEmail(request.getParameter("email"));
                 if(person != null){
-                    if(person.getPassword() == request.getParameter("password")){
+                    if(person.getPassword().equals(request.getParameter("password"))){
                         PersonAll personAll = service.createPersonAll(person);
                         List<Image> images = service.findAllImagesByPerson(person);
                         request.setAttribute("personall", personAll);
                         request.setAttribute("images", images);
-                        url = "miperfil.jsp";
+                        url = "perfil.jsp";
                     }
                     else{
-                        error = "error";
+                        error = "errorpassword";
                         request.setAttribute("error", error);
+                        request.setAttribute("person", person);
                         url = "login.jsp";
                     }
                 }
                 else{
-                    error = "error";
+                    error = "Error Person Null";
                     request.setAttribute("error", error);
+                    request.setAttribute("person", person);
                     url = "login.jsp";
                 }
             }

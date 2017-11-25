@@ -11,11 +11,11 @@ public class PersonAll {
     private String profile;
     private String description;
     private int rate;
-    private int type;
+    private String type;
     private int talentid;
     private String category;
 
-    public PersonAll(int id, String name, String password, int dni, int cellphone, String location, String email, String profile, String description, int rate, int type, int talentid, String category) {
+    public PersonAll(int id, String name, String password, int dni, int cellphone, String location, String email, String profile, String description, int rate, String type, int talentid, String category) {
         this.id = id;
         this.name = name;
         this.password = password;
@@ -124,11 +124,11 @@ public class PersonAll {
         return this;
     }
 
-    public int getType() {
+    public String getType() {
         return type;
     }
 
-    public PersonAll setType(int type) {
+    public PersonAll setType(String type) {
         this.type = type;
         return this;
     }

@@ -19,11 +19,11 @@ public class PersonsEntity extends BaseEntity {
                             getBaseStatement()
                                     .concat(criteria));
             List<Person> persons = new ArrayList<>();
-            while(rs.next())
-                persons.add(Person.from(rs));
+            while(rs.next()) persons.add(Person.from(rs));
+            if(persons.size() != 0) return persons;
+            else return null;}
 
-            return persons;
-        } catch (SQLException e) {
+        catch (SQLException e) {
             e.printStackTrace();
         }
         return null;
@@ -44,8 +44,7 @@ public class PersonsEntity extends BaseEntity {
     }
 
     public Person findByEmail(String email){
-        return findByCriteria(
-                String.format("WHERE person_mail = '%s'", email)).get(0);
+        return findByCriteria(String.format("WHERE person_email = '%s'", email)).get(0);
     }
 
     public List<Person> findAll(){
