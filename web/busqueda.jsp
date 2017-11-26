@@ -6,11 +6,11 @@
   Time: 03:11 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@page contentType="text/html" pageEncoding="ISO-8859-1" language="java"%>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
     <title>Kreart</title>
     <link rel="stylesheet" href="css/styles.css">
@@ -33,7 +33,7 @@
         <ul class="menu">
             <li><a href="inicio.jsp">Inicio</a></li>
             <li><a href="perfil.jsp">Mi perfil</a></li>
-            <li><a href="busqueda.jsp">BÃºsqueda</a></li>
+            <li><a href="busqueda.jsp">Búsqueda</a></li>
         </ul>
     </nav>
 </div>
@@ -73,7 +73,7 @@
             <p>Instagram</p>
         </li>
     </ul>
-    <p class="derechos">Â© 2017 Indigo Recycle. All Rights Reserved</p>
+    <p class="derechos">© 2017 Indigo Recycle. All Rights Reserved</p>
 </footer>
 
 
