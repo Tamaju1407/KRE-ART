@@ -107,15 +107,11 @@ ul,ol{
 	flex-direction: column;
 }
 
-.opciones{
+.opciones {
 	margin: 1rem;
 	display: inline-flex;
 	padding: 35px;
-
 }
-
-
-
 .btn_form{
 	display: flex;
 	justify-content: space-around;
