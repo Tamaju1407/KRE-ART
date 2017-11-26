@@ -31,7 +31,7 @@ public class FillAction {
         String action = request.getParameter("action");
 
         if(method.equals("GET")){
-            
+
         }
 
         if(method.equals("POST")){
