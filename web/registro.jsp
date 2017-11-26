@@ -1,7 +1,8 @@
+<%@page contentType="text/html" pageEncoding="ISO-8859-1"%>
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
 	<title>Kreart</title>
 	<link rel="stylesheet" href="css/styles.css">
@@ -20,11 +21,11 @@
 	</div>
 	<form class="form_reg" action="">
 		<span class="fa fa-user"></span>Nombres<input class="input" name="name" id="name" type="text" placeholder="Ingresa nombre y apellidos completos" required>
-		<span class="fa fa-id-card"></span>D.N.I<input class="input" name="dni" id="dni" type="text" placeholder=" Ingresa 8 digitos" required>
-		<span class="fa fa-phone-square"></span>Telefono<input class="input" name="cellphone" id="cellphone" type="text" placeholder=" Ingresa 9 numeros" required>
-		<span class="fa fa-envelope"></span>Email<input class="input" name="email" id="email" type="email"  placeholder="Ingresa correo electronico" required>
-		<span class="fa fa-home"></span>Direccion<input class="input" name="location" id="location" type="text" placeholder=" Ejm: Av. PerÃº 3624, San MartÃ­n de porres" required>
-		<span class="fa fa-lock"></span>ContraseÃ±a<input class="input"  name="password" id="password" type="password"  placeholder="crea una contraseÃ±a" required>
+		<span class="fa fa-id-card"></span>D.N.I<input class="input" name="dni" id="dni" type="text" placeholder=" Ingresa 8 dígitos" required>
+		<span class="fa fa-phone-square"></span>Teléfono<input class="input" name="cellphone" id="cellphone" type="text" placeholder=" Ingresa 9 números" required>
+		<span class="fa fa-envelope"></span>Email<input class="input" name="email" id="email" type="email"  placeholder="Ingresa correo electrónico" required>
+		<span class="fa fa-home"></span>Dirección<input class="input" name="location" id="location" type="text" placeholder=" Ejm: Av. Perú 3624, San Martín de porres" required>
+		<span class="fa fa-lock"></span>Contraseña<input class="input"  name="password" id="password" type="password"  placeholder="crea una contraseña" required>
 
 		<div class="opciones" action="">
 			<select name="type" id="type" type="checkbox">
@@ -42,7 +43,7 @@
 			<input class="btn_submit" type="submit" value="REGISTRAR">
 			<input class="btn_reset" type="reset" value="LIMPIAR">
 		</div>
-		<p class="form_link">Â¿ya tienes una cuenta?<a href="login.jsp">Ingresa aquÃ­</a></p>
+		<p class="form_link">¿ya tienes una cuenta?<a href="login.jsp">Ingresa aquí</a></p>
 	</form>
 </div>
 
@@ -63,6 +64,6 @@
 			<p>Instagram</p>
 		</li>
 	</ul>
-	<p class="derechos">Â© 2017 Indigo Recycle. All Rights Reserved</p>
+	<p class="derechos">© 2017 Indigo Recycle. All Rights Reserved</p>
 </footer>
 </html>
