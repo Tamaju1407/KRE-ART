@@ -26,6 +26,7 @@
 		<span class="fa fa-envelope"></span>Email<input class="input" name="email" id="email" type="email"  placeholder="Ingresa correo electrónico" required>
 		<span class="fa fa-home"></span>Dirección<input class="input" name="location" id="location" type="text" placeholder=" Ejm: Av. Perú 3624, San Martín de porres" required>
 		<span class="fa fa-lock"></span>Contraseña<input class="input"  name="password" id="password" type="password"  placeholder="crea una contraseña" required>
+		<span class="fa fa-commenting"></span>Descripción<input class="input"  name="password" id="password" type="password"  placeholder="crea una contraseña" required>
 
 		<div class="opciones" action="">
 			<select name="type" id="type" type="checkbox">
