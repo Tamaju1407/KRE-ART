@@ -676,8 +676,6 @@ footer .derechos {
 	letter-spacing: 2px;
 }
 
-
-
 /* responsive*/
 @media only screen and (max-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
 	.cont-galery{
