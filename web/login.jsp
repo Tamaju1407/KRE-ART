@@ -26,7 +26,7 @@
 		<input class="btn" type="submit" value="ENTRAR">
 		<br>
 		<div class="alert">
-			<strong>Error!</strong>
+			<strong>${error}</strong>
 		</div>
 		<p class="form_recover"><a href="#">¿olvidaste la contraseña?</a></p>
 	</form>

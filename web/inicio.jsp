@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: PC01
@@ -36,30 +37,12 @@
     </nav>
 </div>
 <h3>DESTACADOS</h3>
+<c:forEach var="image" items="${images}">
 <div class="gallery">
-    <img src="img/1.jpg" alt="">
-    <div class="desc">Ilustración de Alfred Basha</div>
+    <img src="${image.url}" alt="">
+    <div class="desc">${image.person.name}</div>
 </div>
-<div class="gallery">
-    <img src="img/3.jpg" alt="">
-    <div class="desc">Fotografía de Manuel Mescco Cano</div>
-</div>
-<div class="gallery">
-    <img src="img/4.jpg" alt="">
-    <div class="desc">Lobo de Colores</div>
-</div>
-<div class="gallery">
-    <img src="img/2.jpg" alt="">
-    <div class="desc">Ilustración de Arturo Chavez</div>
-</div>
-<div class="gallery">
-    <img src="img/5.jpg" alt="">
-    <div class="desc">Pintura de Luis Angulo</div>
-</div>
-<div class="gallery">
-    <img src="img/6.jpg" alt="">
-    <div class="desc"> Ilustración de Joel Ramos</div>
-</div>
+</c:forEach>
 </body>
 
 <footer>

@@ -28,8 +28,8 @@
     </div>
     <nav>
         <ul class="menu">
-            <li><a href="inicio.jsp">Inicio</a></li>
-            <li><a href="perfil.jsp">Mi perfil</a></li>
+            <li><a href="login?action=rate">Inicio</a></li>
+            <li><a href="login?action=profile?id=${personall.id}">Mi perfil</a></li>
             <li><a href="login?action=search">Búsqueda</a></li>
         </ul>
     </nav>
@@ -66,7 +66,7 @@
         <c:forEach var="image" items="${images}">
         <div class="photo">
             <a target="_blank" href="login?action=imgs&id=${image.id}"><img src="${image.url}" alt=""></a>
-            <div class="desc">${image.rate}</div>
+            <div class="desc"><div>${image.rate}★</div></div>
         </div>
         </c:forEach>
 
