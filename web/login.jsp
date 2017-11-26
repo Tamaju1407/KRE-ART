@@ -1,7 +1,8 @@
+<%@page contentType="text/html" pageEncoding="ISO-8859-1"%>
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<title>Kreart</title>
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="css/font-awesome.css">
@@ -20,12 +21,14 @@
 	<form action="login" class="login_form" method="post">
 		<input type="hidden" name="action" value="verify"/>
 		<span class="fa fa-user-circle"></span>Usuario<input type="text" name="email" id="email" required autofocus>
-		<span class="fa fa-lock"></span>ContraseÃ±a<input type="password" name="password" id="password" required>
+		<span class="fa fa-lock"></span>Contraseña<input type="password" name="password" id="password" required>
 
 		<input class="btn" type="submit" value="ENTRAR">
 		<br>
-		<input class="btn_name" type="name" value="${error}" >
-		<p class="form_recover"><a href="#">Â¿olvidaste la contraseÃ±a?</a></p>
+		<div class="alert">
+			<strong>Error!</strong>
+		</div>
+		<p class="form_recover"><a href="#">¿olvidaste la contraseña?</a></p>
 	</form>
 
 </div>
@@ -47,6 +50,6 @@
 			<p>Instagram</p>
 		</li>
 	</ul>
-	<p class="derechos">Â© 2017 Indigo Recycle. All Rights Reserved</p>
+	<p class="derechos">© 2017 Indigo Recycle. All Rights Reserved</p>
 </footer>
 </html>
