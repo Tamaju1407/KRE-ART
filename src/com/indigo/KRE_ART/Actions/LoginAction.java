@@ -97,6 +97,7 @@ public class LoginAction extends javax.servlet.http.HttpServlet{
                 int n = 0;
                 List<PersonAll> personalls = new ArrayList<>();
                 while(n != persons.size()) {
+                    if(persons.get(n).getType() == 1)
                     personalls.add(service.createPersonAll(persons.get(n)));
                     n = n + 1;
                 }
